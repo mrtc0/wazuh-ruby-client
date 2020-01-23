@@ -1,0 +1,21 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+bin/console
+bin/setup
+
+Gemfile.lock
+
+# rspec failure tracking
+.rspec_status
+*.crt
+*.key
+*.ca
+.env
+.bundle
+.DS_Store
