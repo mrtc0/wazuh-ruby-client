@@ -1,0 +1,16 @@
+require_relative 'wazuh/version'
+require_relative 'wazuh/logger'
+
+require 'faraday'
+require 'faraday_middleware'
+require 'json'
+require 'logger'
+
+require_relative 'wazuh/config'
+require_relative 'wazuh/faraday/response/raise_error'
+require_relative 'wazuh/faraday/connection'
+require_relative 'wazuh/faraday/request'
+require_relative 'wazuh/api/endpoints'
+require_relative 'wazuh/api/errors/wazuh_error'
+require_relative 'wazuh/api/error'
+require_relative 'wazuh/client'
