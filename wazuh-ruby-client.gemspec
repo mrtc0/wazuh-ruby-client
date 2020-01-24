@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["mrtc0"]
   spec.email         = ["mrtc0@ssrf.in"]
 
-  spec.summary       = %q{Wazuh API Client}
-  spec.description   = %q{Wazuh API Client}
+  spec.summary       = %q{Wazuh API client for Ruby}
+  spec.description   = %q{Wazuh API client for Ruby}
   spec.homepage      = "https://github.com/mrtc0/wazuh-ruby-client"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/mrtc0/wazuh-ruby-client"
-    spec.metadata["changelog_uri"] = "https://github.com/mrtc0/wazuh-ruby-client"
+    spec.metadata["changelog_uri"] = "https://github.com/mrtc0/wazuh-ruby-client/blob/master/CHANGELOG.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

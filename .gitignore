@@ -5,8 +5,8 @@
 /pkg/
 /spec/reports/
 /tmp/
-bin/console
-bin/setup
+/bin/console
+/bin/setup
 
 Gemfile.lock
 
