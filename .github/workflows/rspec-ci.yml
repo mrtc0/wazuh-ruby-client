@@ -1,0 +1,23 @@
+name: Ruby
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Ruby 2.6.5
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.5
+
+    - name: Install bundler2
+      run: gem install bundler
+
+    - name: Bundle install
+      run: bundle install --jobs 4 --retry 3
+
+    - name: Run rspec
+      run: bundle exec rspec
