@@ -4,6 +4,7 @@ require_relative 'endpoints/cache'
 require_relative 'endpoints/ciscat'
 require_relative 'endpoints/cluster'
 require_relative 'endpoints/decoders'
+require_relative 'endpoints/experimental'
 require_relative 'endpoints/rules'
 require_relative 'endpoints/security_configuration_assessment'
 require_relative 'endpoints/summary'
@@ -19,6 +20,7 @@ module Wazuh
       include Ciscat
       include Cluster
       include Decoders
+      include Experimental
       include Rules
       include Summary
       include Syscheck
