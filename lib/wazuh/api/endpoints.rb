@@ -1,4 +1,7 @@
 require_relative 'endpoints/agents'
+require_relative 'endpoints/cache'
+require_relative 'endpoints/ciscat'
+require_relative 'endpoints/cluster'
 require_relative 'endpoints/rules'
 require_relative 'endpoints/security_configuration_assessment'
 require_relative 'endpoints/summary'
@@ -9,6 +12,9 @@ module Wazuh
   module Api
     module Endpoints
       include Agents
+      include Cache
+      include Ciscat
+      include Cluster
       include Rules
       include Summary
       include Syscheck

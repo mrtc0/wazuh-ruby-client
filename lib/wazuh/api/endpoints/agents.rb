@@ -29,33 +29,33 @@ module Wazuh
 
         # Returns various information from an agent.
         #
-        # @option options [agent_id] :agent_id
+        # @param [String] agent_id
         #   ID to agent
         # @option options [select] :select
         #   List of selected fields separated by commas.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-an-agent
-        def agent(options = {})
-          get "/agents/#{options[:agent_id]}", options
+        def agent(agent_id, options = {})
+          get "/agents/#{agent_id}", options
         end
 
         # Returns various information from an agent called :agent_name.
         #
-        # @option options [agent_name] :agent_name
+        # @param [String] agent_name
         #   Name to agent
         # @option options [select] :select
         #   List of selected fields separated by commas.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-an-agent-by-its-name
-        def agent_by_name(options = {})
-          get "/agents/name/#{options[:agent_name]}", options
+        def agent_by_name(agent_name, options = {})
+          get "/agents/name/#{agent_name}", options
         end
 
         # Returns the key of an agent.
         #
-        # @option options [agent_id] :agent_id
+        # @param [String] agent_id
         #   ID to agent
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-agent-key
-        def agent_key(options = {})
-          get "/agents/#{options[:agent_id]}/key"
+        def agent_key(agent_id, options = {})
+          get "/agents/#{agent_id}/key"
         end
 
         # Restarts a list of agents.
@@ -75,11 +75,11 @@ module Wazuh
 
         # Restart an agent.
         #
-        # @option options [agent_id] :agent_id
+        # @param [String] agent_id
         #   Agent unique ID.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#restart-an-agent
-        def restart_an_agents(options = {})
-          put "/agents/#{options[:agent_id]}/restart"
+        def restart_an_agents(agent_id, options = {})
+          put "/agents/#{agent_id}/restart"
         end
 
         # Returns all the different combinations that agents have for the selected fields. It also indicates the total number of agents that have each combination.
@@ -120,12 +120,12 @@ module Wazuh
 
         # Returns the upgrade result from an agent.
         #
-        # @option options [agent_id] :agent_id
+        # @param [String] agent_id
         #   ID to agent
         # @option options [timeout] :timeout
         #   Seconds to wait for the agent to respond.
-        def upgrade_result_from_agent(options = {})
-          get "/agents/#{options[:agent_id]}/upgrade_result", options
+        def upgrade_result_from_agent(agent_id, options = {})
+          get "/agents/#{agent_id}/upgrade_result", options
         end
 
         # Add a new agent

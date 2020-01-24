@@ -61,9 +61,18 @@ module Wazuh
 
         # Returns the rules with the specified id.
         #
+        # @param [String] rule_id
+        # @option options [offset] :offset
+        #   First element to return in the collection.
+        # @option options [limit] :limit
+        #   Maximum number of elements to return.
+        # @option options [sort] :sort
+        #   Sorts the collection by a field or fields (separated by comma). Use +/- at the beginning to list in ascending or descending order.
+        # @option options [search] :search
+        #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rules-by-id
-        def rule_by_id(options = {})
-          get "/rules/#{options[:rule_id]}", options
+        def rule_by_id(rule_id, options = {})
+          get "/rules/#{rule_id}", options
         end
       end
     end

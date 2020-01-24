@@ -51,6 +51,24 @@ Wazuh.configure do |config|
 end
 ```
 
+## Support API
+
+- [ ] Active Response
+- [x] Agents
+- [x] Cache
+- [x] Ciscat
+- [x] Cluster
+- [ ] Decoders
+- [ ] Experimental
+- [ ] Lists
+- [ ] Manager
+- [ ] Rootcheck
+- [x] Rules
+- [x] Security Configuration Assessment
+- [x] Summary
+- [x] Syscheck
+- [x] Syscollector
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mrtc0/wazuh-ruby-client.
