@@ -1,7 +1,7 @@
 # Wazuh Ruby Client
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/mrtc0/wazuh-ruby-client/blob/master/LICENSE.txt)
-![](https://github.com/mrtc0/wazuh-ruby-client/workflows/rspec-ci/badge.svg)
+![](https://github.com/mrtc0/wazuh-ruby-client/workflows/GitHub%20Workflow/badge.svg)
 
 
 A Ruby client for the wazuh APIs.
