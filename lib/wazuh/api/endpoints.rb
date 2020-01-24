@@ -1,3 +1,4 @@
+require_relative 'endpoints/active-response'
 require_relative 'endpoints/agents'
 require_relative 'endpoints/cache'
 require_relative 'endpoints/ciscat'
@@ -11,6 +12,7 @@ require_relative 'endpoints/syscollector'
 module Wazuh
   module Api
     module Endpoints
+      include ActiveResponse
       include Agents
       include Cache
       include Ciscat
