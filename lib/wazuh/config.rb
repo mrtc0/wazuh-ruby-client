@@ -7,6 +7,9 @@ module Wazuh
       user_agent
       client_cert
       client_key
+      basic_user
+      basic_password
+      verify_ssl
       logger
       endpoint
     ].freeze
@@ -18,6 +21,9 @@ module Wazuh
       self.user_agent = "Wazuh Ruby Client/#{Wazuh::VERSION}"
       self.client_cert = nil
       self.client_key = nil
+      self.basic_user = nil
+      self.basic_password = nil
+      self.verify_ssl = true
       self.logger = nil
     end
   end
