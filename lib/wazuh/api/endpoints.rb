@@ -1,4 +1,4 @@
-require_relative 'endpoints/active-response'
+require_relative 'endpoints/active_response'
 require_relative 'endpoints/agents'
 require_relative 'endpoints/cache'
 require_relative 'endpoints/ciscat'
