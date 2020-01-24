@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Wazuh::Api::Endpoints::Syscheck
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Wazuh::Api::Endpoints::Syscheck";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Api.html" title="Wazuh::Api (module)">Api</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Endpoints</a></span></span>
+     &raquo; 
+    <span class="title">Syscheck</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Wazuh::Api::Endpoints::Syscheck
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/wazuh/api/endpoints/syscheck.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_syscheck_database-instance_method" title="#clear_syscheck_database (instance method)">#<strong>clear_syscheck_database</strong>(agent_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clears the syscheck database for the specified agent.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_syscheck_scan-instance_method" title="#last_syscheck_scan (instance method)">#<strong>last_syscheck_scan</strong>(agent_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the timestamp of the last syscheck scan.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_syscheck-instance_method" title="#run_syscheck (instance method)">#<strong>run_syscheck</strong>(agent_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Runs syscheck and rootcheck on an agent (Wazuh launches both processes
+simultaneously).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_syscheck_all_agents-instance_method" title="#run_syscheck_all_agents (instance method)">#<strong>run_syscheck_all_agents</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Runs syscheck and rootcheck on all agents (Wazuh launches both processes
+simultaneously).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#syscheck_files-instance_method" title="#syscheck_files (instance method)">#<strong>syscheck_files</strong>(agent_id, options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the syscheck files of an agent.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_syscheck_database-instance_method">
+  
+    #<strong>clear_syscheck_database</strong>(agent_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clears the syscheck database for the specified agent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID to agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#clear-syscheck-database-of-an-agent" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#clear-syscheck-database-of-an-agent">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#clear-syscheck-database-of-an-agent</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscheck.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_syscheck_database'>clear_syscheck_database</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last_syscheck_scan-instance_method">
+  
+    #<strong>last_syscheck_scan</strong>(agent_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the timestamp of the last syscheck scan.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID to agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-last-syscheck-scan" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-last-syscheck-scan">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-last-syscheck-scan</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscheck.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_syscheck_scan'>last_syscheck_scan</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/last_scan</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run_syscheck-instance_method">
+  
+    #<strong>run_syscheck</strong>(agent_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Runs syscheck and rootcheck on an agent (Wazuh launches both processes
+simultaneously).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID to agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-an-agent" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-an-agent">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-an-agent</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscheck.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run_syscheck'>run_syscheck</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run_syscheck_all_agents-instance_method">
+  
+    #<strong>run_syscheck_all_agents</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Runs syscheck and rootcheck on all agents (Wazuh launches both processes
+simultaneously).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-all-agents" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-all-agents">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#run-syscheck-scan-in-all-agents</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscheck.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run_syscheck_all_agents'>run_syscheck_all_agents</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/syscheck</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="syscheck_files-instance_method">
+  
+    #<strong>syscheck_files</strong>(agent_id, options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the syscheck files of an agent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID to agent</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:offset</span>
+          <span class="type">(<tt>offset</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>First element to return in the collection.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:limit</span>
+          <span class="type">(<tt>limit</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Maximum number of elements to return.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:sort</span>
+          <span class="type">(<tt>sort</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Sorts the collection by a field or fields (separated by comma). Use +/- at
+the beginning to list in ascending or descending order.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:search</span>
+          <span class="type">(<tt>search</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Looks for elements with the specified string.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:file</span>
+          <span class="type">(<tt>file</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Filters file by filename.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:type</span>
+          <span class="type">(<tt>type</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Selects type of file. Allowed values: file, registry</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:summary</span>
+          <span class="type">(<tt><span class='object_link'><a href="Summary.html#summary-instance_method" title="Wazuh::Api::Endpoints::Summary#summary (method)">summary</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Returns a summary grouping by filename. Allowed values: yes, no</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:select</span>
+          <span class="type">(<tt>select</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>List of selected fields separated by commas.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:md5</span>
+          <span class="type">(<tt>md5</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Returns the files with the specified md5 hash.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:sha1</span>
+          <span class="type">(<tt>sha1</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Returns the files with the specified sha1 hash.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:sha256</span>
+          <span class="type">(<tt>sha256</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Returns the files with the specified sha256 hash.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:hash</span>
+          <span class="type">(<tt>hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Returns the files with the specified hash (md5, sha1 or sha256).</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-syscheck-files" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-syscheck-files">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-syscheck-files</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscheck.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_syscheck_files'>syscheck_files</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Jan 25 00:19:40 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

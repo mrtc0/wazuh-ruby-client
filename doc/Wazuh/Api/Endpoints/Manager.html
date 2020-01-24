@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Wazuh::Api::Endpoints::Manager
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Wazuh::Api::Endpoints::Manager";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Api.html" title="Wazuh::Api (module)">Api</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Endpoints</a></span></span>
+     &raquo; 
+    <span class="title">Manager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Wazuh::Api::Endpoints::Manager
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/wazuh/api/endpoints/manager.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_manager_configuration-instance_method" title="#check_manager_configuration (instance method)">#<strong>check_manager_configuration</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check Wazuh configuration Returns if Wazuh configuration is OK.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_manager_local_file-instance_method" title="#delete_manager_local_file (instance method)">#<strong>delete_manager_local_file</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a local file Confirmation message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_manager_local_file-instance_method" title="#get_manager_local_file (instance method)">#<strong>get_manager_local_file</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get local file Returns the content of a local file (rules, decoders and
+lists).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_active_configuration-instance_method" title="#manager_active_configuration (instance method)">#<strong>manager_active_configuration</strong>(component, configuration)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager active configuration Returns the requested configuration in
+JSON format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_analysisd_stats-instance_method" title="#manager_analysisd_stats (instance method)">#<strong>manager_analysisd_stats</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get analysisd stats Returns a summary of the current analysisd stats.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_configuration-instance_method" title="#manager_configuration (instance method)">#<strong>manager_configuration</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager configuration Returns ossec.conf in JSON format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_information-instance_method" title="#manager_information (instance method)">#<strong>manager_information</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager information Returns basic information about manager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_log-instance_method" title="#manager_log (instance method)">#<strong>manager_log</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get ossec.log Returns the three last months of ossec.log.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_remoted_stats-instance_method" title="#manager_remoted_stats (instance method)">#<strong>manager_remoted_stats</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get remoted stats Returns a summary of the current remoted stats.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_stats-instance_method" title="#manager_stats (instance method)">#<strong>manager_stats</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager stats Returns Wazuh statistical information for the current or
+specified date.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_stats_by_hour-instance_method" title="#manager_stats_by_hour (instance method)">#<strong>manager_stats_by_hour</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager stats by hour Returns Wazuh statistical information per hour.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_stats_by_weekly-instance_method" title="#manager_stats_by_weekly (instance method)">#<strong>manager_stats_by_weekly</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager stats by weekly Returns Wazuh statistical information per week.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_status-instance_method" title="#manager_status (instance method)">#<strong>manager_status</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get manager status Returns the status of the manager processes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#manager_summary_log-instance_method" title="#manager_summary_log (instance method)">#<strong>manager_summary_log</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get summary of ossec.log Returns a summary of the last three months of the
+<code>ossec.log</code> file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restart_manager-instance_method" title="#restart_manager (instance method)">#<strong>restart_manager</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Restart Wazuh manager Restarts Wazuh manager.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_manager_local_file-instance_method" title="#update_manager_local_file (instance method)">#<strong>update_manager_local_file</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update local file Upload a local file (rules, decoders and lists).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_manager_configuration-instance_method">
+  
+    #<strong>check_manager_configuration</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check Wazuh configuration Returns if Wazuh configuration is OK.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#check-wazuh-configuration" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#check-wazuh-configuration">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#check-wazuh-configuration</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_manager_configuration'>check_manager_configuration</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/configuration/validation</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_manager_local_file-instance_method">
+  
+    #<strong>delete_manager_local_file</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete a local file Confirmation message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt>path</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Relative path of file. This parameter is mandatory.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-a-local-file" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-a-local-file">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-a-local-file</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_manager_local_file'>delete_manager_local_file</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_manager_local_file-instance_method">
+  
+    #<strong>get_manager_local_file</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get local file Returns the content of a local file (rules, decoders and
+lists).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt>path</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Relative path of file. This parameter is mandatory.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:validation</span>
+          <span class="type">(<tt>validation</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Validates the content of the file. An error will be returned if file
+content is not strictly correct. False by default.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-local-file" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-local-file">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-local-file</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_manager_local_file'>get_manager_local_file</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_active_configuration-instance_method">
+  
+    #<strong>manager_active_configuration</strong>(component, configuration)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager active configuration Returns the requested configuration in
+JSON format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>component</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Selected component.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>configuration</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Configuration to read.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-active-configuration" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-active-configuration">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-active-configuration</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_active_configuration'>manager_active_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/manager/config/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_configuration'>configuration</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_analysisd_stats-instance_method">
+  
+    #<strong>manager_analysisd_stats</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get analysisd stats Returns a summary of the current analysisd stats.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-analysisd-stats" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-analysisd-stats">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-analysisd-stats</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_analysisd_stats'>manager_analysisd_stats</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/analysisd</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_configuration-instance_method">
+  
+    #<strong>manager_configuration</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager configuration Returns ossec.conf in JSON format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:section</span>
+          <span class="type">(<tt>section</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Indicates the ossec.conf section: global, rules, syscheck, rootcheck,
+remote, alerts, command, active-response, localfile.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:field</span>
+          <span class="type">(<tt>field</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Indicates a section child, e.g, fields for rule section are: include,
+decoder_dir, etc.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_configuration'>manager_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/configuration</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_information-instance_method">
+  
+    #<strong>manager_information</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager information Returns basic information about manager.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-information" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-information">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-information</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_information'>manager_information</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/info</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_log-instance_method">
+  
+    #<strong>manager_log</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get ossec.log Returns the three last months of ossec.log.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ossec-log" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ossec-log">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ossec-log</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_log'>manager_log</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/logs</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_remoted_stats-instance_method">
+  
+    #<strong>manager_remoted_stats</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get remoted stats Returns a summary of the current remoted stats.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-remoted-stats" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-remoted-stats">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-remoted-stats</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 150</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_remoted_stats'>manager_remoted_stats</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/remoted</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_stats-instance_method">
+  
+    #<strong>manager_stats</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager stats Returns Wazuh statistical information for the current or
+specified date.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:date</span>
+          <span class="type">(<tt>date</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Selects the date for getting the statistical information. Format: YYYYMMDD</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_stats'>manager_stats</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_stats_by_hour-instance_method">
+  
+    #<strong>manager_stats_by_hour</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager stats by hour Returns Wazuh statistical information per hour.
+Each number in the averages field represents the average of alerts per
+hour.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-hour" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-hour">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-hour</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_stats_by_hour'>manager_stats_by_hour</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/hourly</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_stats_by_weekly-instance_method">
+  
+    #<strong>manager_stats_by_weekly</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager stats by weekly Returns Wazuh statistical information per week.
+Each number in the hours field represents the average alerts per hour for
+that specific day.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-week" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-week">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-stats-by-week</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_stats_by_weekly'>manager_stats_by_weekly</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/weekly</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_status-instance_method">
+  
+    #<strong>manager_status</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get manager status Returns the status of the manager processes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-status" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-status">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-manager-status</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_status'>manager_status</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/status</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="manager_summary_log-instance_method">
+  
+    #<strong>manager_summary_log</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get summary of ossec.log Returns a summary of the last three months of the
+<code>ossec.log</code> file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-summary-of-ossec-log" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-summary-of-ossec-log">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-summary-of-ossec-log</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_manager_summary_log'>manager_summary_log</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/logs/summary</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restart_manager-instance_method">
+  
+    #<strong>restart_manager</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Restart Wazuh manager Restarts Wazuh manager.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#restart-wazuh-manager" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#restart-wazuh-manager">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#restart-wazuh-manager</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restart_manager'>restart_manager</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/restart</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_manager_local_file-instance_method">
+  
+    #<strong>update_manager_local_file</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update local file Upload a local file (rules, decoders and lists).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt>path</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Relative path of file. This parameter is mandatory.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:validation</span>
+          <span class="type">(<tt>validation</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Validates the content of the file. An error will be returned if file
+content is not strictly correct. False by default.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:overwrite</span>
+          <span class="type">(<tt>overwrite</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Replaces the existing file. False by default.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#update-local-file" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#update-local-file">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#update-local-file</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_manager_local_file'>update_manager_local_file</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sat Jan 25 00:19:40 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
