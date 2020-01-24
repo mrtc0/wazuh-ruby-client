@@ -1,5 +1,5 @@
 module Wazuh
-  module APi
+  module Api
     module Endpoints
       module Syscollector
         #
