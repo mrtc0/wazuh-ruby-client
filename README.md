@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/mrtc0/wazuh-ruby-client/blob/master/LICENSE.txt)
 ![](https://github.com/mrtc0/wazuh-ruby-client/workflows/GitHub%20Workflow/badge.svg)
+[![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](https://mrtc0.github.io/wazuh-ruby-client)
 
 
 A Ruby client for the wazuh APIs.
