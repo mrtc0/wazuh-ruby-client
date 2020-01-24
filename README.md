@@ -60,9 +60,9 @@ end
 - [x] Cluster
 - [x] Decoders
 - [x] Experimental
-- [ ] Lists
-- [ ] Manager
-- [ ] Rootcheck
+- [x] Lists
+- [x] Manager
+- [x] Rootcheck
 - [x] Rules
 - [x] Security Configuration Assessment
 - [x] Summary
