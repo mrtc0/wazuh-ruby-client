@@ -53,13 +53,13 @@ end
 
 ## Support API
 
-- [ ] Active Response
+- [x] Active Response
 - [x] Agents
 - [x] Cache
 - [x] Ciscat
 - [x] Cluster
-- [ ] Decoders
-- [ ] Experimental
+- [x] Decoders
+- [x] Experimental
 - [ ] Lists
 - [ ] Manager
 - [ ] Rootcheck
