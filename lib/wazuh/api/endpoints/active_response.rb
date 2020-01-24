@@ -13,7 +13,7 @@ module Wazuh
         #   Whether the specified command is a custom command or not.
         # @option options [arguments] :arguments
         #   Array with command arguments.
-        def run_active_response_command(agent_id, options)
+        def run_active_response_command(agent_id, options = {})
           put "/active-response/#{agent_id}", options
         end
       end
