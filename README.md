@@ -144,7 +144,7 @@ List agents' processes.
 
 ### Other
 
-wazuh-ruby-client support to all Wazuh API.  
+wazuh-ruby-client is support to all Wazuh API.  
 
 - [x] Active Response
 - [x] Agents
@@ -162,7 +162,7 @@ wazuh-ruby-client support to all Wazuh API.
 - [x] Syscheck
 - [x] Syscollector
 
-Refer to the Wazuh API Method Reference for the list of all available methods.
+Refer to the document of wazuh-ruby-client and Wazuh API Reference for the list of all available methods.
 
 - https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints.html
 - https://documentation.wazuh.com/3.10/user-manual/api/reference.html
