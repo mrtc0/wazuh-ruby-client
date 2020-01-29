@@ -6,6 +6,8 @@ require 'faraday_middleware'
 require 'json'
 require 'logger'
 require 'base64'
+require 'ostruct'
+require 'sawyer'
 
 require_relative 'wazuh/config'
 require_relative 'wazuh/faraday/response/raise_error'

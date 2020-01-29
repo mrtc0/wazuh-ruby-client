@@ -21,17 +21,18 @@ module Wazuh
       private
 
       def request(method, path, options)
-        response = connection.send(method) do |request|
-          case method
-          when :get, :delete
-            request.url(path, options)
-          when :post, :put
-            request.path = path
-            request.body = options unless options.empty?
-          end
-          request.options.merge!(options.delete(:request)) if options.key?(:request)
+        response = case method
+        when :get, :delete
+          connection.call(method, URI::Parser.new.escape(path), nil, {query: options})
+        when :post, :put
+          data = options unless options.empty?
+          connection.call(method, URI::Parser.new.escape(path), data)
         end
-        response.body
+
+        return response.data.data if response.status == 200 || response.data.error == 0
+        
+        error_message = response.data.message
+        raise Wazuh::Api::Errors::WazuhError.new(error_message, response)
       end
     end
   end

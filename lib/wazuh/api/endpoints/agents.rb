@@ -5,26 +5,26 @@ module Wazuh
         #
         # Returns a list with the available agents.
         # 
-        # @option options [offset] :offset
+        # @option options [String] :offset
         #   First element to return in the collection.
-        # @option options [limit] :limit
+        # @option options [String] :limit
         #   Maximum number of elements to return.
-        # @option options [select] :select
+        # @option options [String] :select
         #   Select which fields to return (separated by comma).
-        # @option options [sort] :sort
+        # @option options [String] :sort
         #   Sorts the collection by a field or fields (separated by comma). Use +/- at the beginning to list in ascending or descending order.
-        # @option options [search] :search
+        # @option options [String] :search
         #   Looks for elements with the specified string.
-        # @option options [status] :status
+        # @option options [String] :status
         #   Filters by agent status. Use commas to enter multiple statuses.
         #   Allowed values: active, pending, neverconnected, disconnected
-        # @option options [q] :q
-        #   Query to filter results by. For example q=”status=Active”
-        # @option options [order_than] :order_than
+        # @option options [String] :order_than
         #   Filters out disconnected agents for longer than specified. Time in seconds, ‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never connected agents, uses the register date.
+        # @return [Array] Returns Array containing agents
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-agents
         def all_agents(options = {})
-          get '/agents', options
+          data = get '/agents', options
+          data.items
         end
 
         # Returns various information from an agent.
@@ -33,6 +33,7 @@ module Wazuh
         #   ID to agent
         # @option options [select] :select
         #   List of selected fields separated by commas.
+        # @return [Sawyer::Resource] Returns Sawyer::Resource
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-an-agent
         def agent(agent_id, options = {})
           get "/agents/#{agent_id}", options
@@ -44,15 +45,18 @@ module Wazuh
         #   Name to agent
         # @option options [select] :select
         #   List of selected fields separated by commas.
+        # @return [Sawyer::Resource] Returns Sawyer::Resource
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-an-agent-by-its-name
         def agent_by_name(agent_name, options = {})
           get "/agents/name/#{agent_name}", options
         end
 
+        # Get agent key
         # Returns the key of an agent.
         #
         # @param [String] agent_id
         #   ID to agent
+        # @return [String] Returns the key of an agent
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-agent-key
         def agent_key(agent_id, options = {})
           get "/agents/#{agent_id}/key"
@@ -144,13 +148,24 @@ module Wazuh
           post '/agents', options
         end
 
+        # Delete an agent
+        # Removes an agent.
+        #
+        # @param [String] agent_id
+        # @option options [Bool] purge
+        #   Delete an agent from the key store. This parameter is only valid if purge is set to no in the manager’s ossec.conf.
+        # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-an-agent
+        def delete_agent(agent_id, options = {})
+          delete "/agents/#{agent_id}", options
+        end
+
         # Adds a new agent with name :agent_name. This agent will use ANY as IP.
         #
-        # @option options [name] :name
+        # @param [String] agent_name
         #   Name to agent
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method
-        def add_agent_quick(options = {})
-          put '/agents', options
+        def add_agent_quick(agent_name)
+          put "/agents/#{agent_name}"
         end
 
         # Insert an agent with an existing id and key.

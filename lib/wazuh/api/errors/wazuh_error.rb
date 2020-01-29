@@ -1,7 +1,7 @@
 module Wazuh
   module Api
     module Errors
-      class WazuhError < ::Faraday::Error
+      class WazuhError < StandardError
         attr_reader :response, :message
 
         def initialize(message, response = nil)

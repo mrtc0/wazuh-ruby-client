@@ -39,7 +39,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-byebug"
 
   spec.add_dependency 'faraday', '>= 0.9'
   spec.add_dependency 'faraday_middleware'
+  spec.add_dependency 'sawyer'
 end
