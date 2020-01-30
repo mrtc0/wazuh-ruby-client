@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module Wazuh
-  module Faraday
+  module Sawyer
     module Request
       def get(path, options = {})
         request(:get, path, options)

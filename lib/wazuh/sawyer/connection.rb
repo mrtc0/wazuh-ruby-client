@@ -1,5 +1,5 @@
 module Wazuh
-  module Faraday
+  module Sawyer
     module Connection
       private
 
@@ -23,22 +23,10 @@ module Wazuh
         options[:ssl].merge!({ verify: false }) unless verify_ssl
 
         opts = {
-          :links_parser => Sawyer::LinkParsers::Simple.new
+          :links_parser => ::Sawyer::LinkParsers::Simple.new
         }
 
         opts[:faraday] = ::Faraday.new(options)
-
-        # request_options = {}
-
-        # ::Faraday.new(endpoint, options) do |connection|
-        #   connection.use ::Faraday::Request::Multipart
-        #   connection.use ::Faraday::Request::UrlEncoded
-        #   connection.use ::Faraday::Response::RaiseError
-        #   connection.use ::Wazuh::Faraday::Response::RaiseError
-        #   connection.use ::FaradayMiddleware::ParseJson
-        #   connection.response :logger, logger if logger
-        #   connection.adapter ::Faraday.default_adapter
-        # end
 
         ::Sawyer::Agent.new(endpoint, opts)
       end
