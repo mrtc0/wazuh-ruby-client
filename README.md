@@ -78,30 +78,37 @@ Get all agents list.
 
 ```ruby
 > client.all_agents
-# => {"error"=>0,
- "data"=>
-  {"items"=>
-    [{"os"=>
-       {"arch"=>"x86_64",
-        "codename"=>"Xenial Xerus",
-        "major"=>"16",
-        "minor"=>"04",
-        "name"=>"Ubuntu",
-        "platform"=>"ubuntu",
-        "uname"=>"Linux |wazuh-manager-master-0 |4.14.138+ |#1 SMP Tue Sep 3 02:58:08 PDT 2019 |x86_64",
-        "version"=>"16.04.6 LTS"},
-      "status"=>"Active",
-      "dateAdd"=>"2020-01-07 16:13:05",
-      "ip"=>"127.0.0.1",
-      "id"=>"000",
-      "registerIP"=>"127.0.0.1",
-      "node_name"=>"wazuh-manager-master",
-      "manager"=>"wazuh-manager-master-0",
-      "name"=>"wazuh-manager-master-0",
-      "lastKeepAlive"=>"9999-12-31 23:59:59",
-      "version"=>"Wazuh v3.11.1"}],
-    ...
-   "totalItems"=>5}}
+=> [
+      {
+        :os=>{
+          :arch=>"x86_64",
+          :codename=>"Xenial Xerus",
+          :major=>"16",
+          :minor=>"04",
+          :name=>"Ubuntu",
+          :platform=>"ubuntu",
+          :uname=>"Linux |wazuh-manager |4.15.0-60-generic |#67-Ubuntu SMP Thu Aug 22 16:55:30 UTC 2019 |x86_64",
+          :version=>"16.04.6 LTS"
+        },
+        :manager=>"wazuh-manager",
+        :id=>"000",
+        :registerIP=>"127.0.0.1",
+        :name=>"wazuh-manager",
+        :version=>"Wazuh v3.11.0",
+        :ip=>"127.0.0.1",
+        :dateAdd=>"2020-01-27 17:02:18",
+        :status=>"Active",
+        :lastKeepAlive=>"9999-12-31 23:59:59",
+        :node_name=>"wazuh-master-1"
+      },
+      ...
+  ]
+
+> agents.first.os.name
+=> "Ubuntu"
+
+> agents.first.id
+=> "000"
 ```
 
 filter by options. (see https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints/Agents.html#all_agents-instance_method )
@@ -118,7 +125,7 @@ filter by options. (see https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endp
 List agent's packages.
 
 ```ruby
-> client.packages('000')['data']['items'].map { |package| package['name'] }
+> client.packages('000').map { |package| package.name }
 => ["python-apt-common",
  "python-idna",
  "libedit2",
@@ -133,7 +140,7 @@ List agent's packages.
 List agents' processes.
 
 ```ruby
-> client.processes('000')['data']['items'].map { |p| p['name'] }
+> client.packages('000').map { |package| package.name }
 => ["entrypoint.sh",
  "my_init",
  "syslog-ng",
