@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://wazuh.local:55000/agents/004/key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": "MDA0IHNlcnZlcjAwMSAxMC4wLjAuNjIgY2U3NmM1ZTQxNzJjZDg0ZGIxZmIwYTJlMzdiMTZjNTJjODQ3YjYxNjQ3ZjZjZWNlNmM2OWRlZjFkZjIwNDI0Mg=="
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+recorded_with: VCR 5.0.0

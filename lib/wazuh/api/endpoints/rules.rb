@@ -7,56 +7,64 @@ module Wazuh
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-rules
         def all_rules(options = {})
-          get '/rules', options
+          data = get '/rules', options
+          data.items
         end
 
         # Returns the files of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-files-of-rules
         def rule_files(options = {})
-          get '/rules/files', options
+          data = get '/rules/files', options
+          data.items
         end
 
         # Returns the GDPR requirements of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-gdpr-requirements
         def gdpr_rules(options = {})
-          get '/rules/gdpr', options
+          data = get '/rules/gdpr', options
+          data.items
         end
 
         # Returns the GPG13 requirements of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-gpg13-requirements
         def gpg13_rules(options = {})
-          get '/rules/gpg13', options
+          data = get '/rules/gpg13', options
+          data.items
         end
 
         # Returns the groups of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-groups
         def rules_groups(options = {})
-          get '/rules/groups', options
+          data = get '/rules/groups', options
+          data.items
         end
 
         # Returns the HIPAA requirements of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-hipaa-requirements
         def hipaa_rules(options = {})
-          get '/rules/hipaa', options
+          data = get '/rules/hipaa', options
+          data.items
         end
 
         # Returns the NIST-800-53 requirements of all rules.
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-nist-800-53-requirements
         def nist_800_53_rules(options = {})
-          get '/rules/nist-800-53', options
+          data = get '/rules/nist-800-53', options
+          data.items
         end
 
         # Returns the PCI requirements of all rules
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rule-pci-requirements
         def pic_rules(options = {})
-          get '/rules/pci', options
+          data = get '/rules/pci', options
+          data.items
         end
 
         # Returns the rules with the specified id.
@@ -72,7 +80,8 @@ module Wazuh
         #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rules-by-id
         def rule_by_id(rule_id, options = {})
-          get "/rules/#{rule_id}", options
+          data = get "/rules/#{rule_id}", options
+          data.items
         end
       end
     end

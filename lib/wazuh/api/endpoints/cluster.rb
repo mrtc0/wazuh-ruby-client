@@ -116,7 +116,8 @@ module Wazuh
         # @option options [category] :category
         #   Filters by category of log
         def cluster_logs_by_node(node_id, options)
-          get "/cluster/#{node_id}/logs", options
+          data = get "/cluster/#{node_id}/logs", options
+          data.items
         end
 
         # Get summary of ossec.log from a specific node in cluster
@@ -141,7 +142,8 @@ module Wazuh
         # Get nodes info
         #
         def nodes(options = {})
-          get '/cluster/nodes', options
+          data = get '/cluster/nodes', options
+          data.items
         end
 
         # Restart a specific node in cluster

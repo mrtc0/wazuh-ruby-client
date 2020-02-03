@@ -1,7 +1,7 @@
 module Wazuh
   class Client
-    include Faraday::Connection
-    include Faraday::Request
+    include Sawyer::Connection
+    include Sawyer::Request
     include Api::Endpoints
 
     attr_accessor(*Config::ATTRIBUTES)
