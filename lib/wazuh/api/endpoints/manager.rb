@@ -90,7 +90,8 @@ module Wazuh
         #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ossec-log
         def manager_log
-          get '/manager/logs'
+          data = get '/manager/logs'
+          data.items
         end
 
         # Get summary of ossec.log

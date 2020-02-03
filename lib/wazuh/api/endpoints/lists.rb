@@ -18,7 +18,8 @@ module Wazuh
         #   Filters by path.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-lists
         def cdb_lists(options = {})
-          get '/lists', options
+          data = get '/lists', options
+          data.items
         end
 
         # Get paths from all lists
@@ -33,8 +34,9 @@ module Wazuh
         # @option options [search] :search
         #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-paths-from-all-lists
-        def cdb_files(options = {})
-          get '/lists/files', options
+        def cdb_files_path(options = {})
+          data = get '/lists/files', options
+          data.items
         end
       end
     end
