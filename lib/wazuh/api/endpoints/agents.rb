@@ -159,6 +159,20 @@ module Wazuh
           delete "/agents/#{agent_id}", options
         end
 
+        # Delete agents
+        # Removes agents, using a list of them or a criterion based on the status or time of the last connection.
+        # @option options [String] ids
+        #   Agent IDs separated by commas.
+        # @option options [Bool] purge
+        #   Delete an agent from the key store. This parameter is only valid if purge is set to no in the manager’s ossec.conf.
+        # @option options [String] status
+        #   Filters by agent status. Use commas to enter multiple statuses. Allowed values: active, pending, neverconnected, disconnected
+        # @option options [String] older_than
+        #   Filters out disconnected agents for longer than specified. Time in seconds, ‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never connected agents, uses the register date. Default value: 7d.
+        def delete_agents(options = {})
+          delete '/agents', options
+        end
+
         # Adds a new agent with name :agent_name. This agent will use ANY as IP.
         #
         # @param [String] agent_name
@@ -183,6 +197,223 @@ module Wazuh
         #   Remove the old agent the with same IP if disconnected since <force> seconds.
         def insert_agent(options = {})
           post '/agents/insert', options
+        end
+
+        # Get active configuration
+        # @param [String] agent_id
+        # @param [String] component
+        #   Selected component. Alowed values see document
+        # @param [String] configuration
+        #   Selected component. Alowed values see document
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-active-configuration
+        def agent_config(agent_id, component, configuration)
+          get "/agents/#{agent_id}/config/#{component}/#{configuration}"
+        end
+
+        # Delete a list of groups
+        # @param [String] ids
+        # @see http://documentation.wazuh.com/3.11/user-manual/api/reference.html#delete-a-list-of-groups
+        def delete_agent_by_group(ids)
+          delete '/agents/groups', {ids: ids}
+        end
+
+        # Get sync status of agent
+        # Returns the sync status in JSON format
+        #
+        # @param [String] agent_id
+        #   Agent ID
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-sync-status-of-agent
+        def agent_sync_status(agent_id)
+          get "/agent/#{agent_id}/group/is_sync"
+        end
+
+        # Add a list of agents to a group
+        # Adds a list of agents to the specified group
+        #
+        # @param [Array[String]] ids
+        #   List of agent ID
+        # @param [String] group_id
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-a-list-of-agents-to-a-group
+        def add_agents_to_group(ids, group_id)
+          post "/agents/group/#{group_id}", {ids: ids}
+        end
+
+        # Add agent group
+        # Adds an agent to the specified group.
+        #
+        # @param [String] agent_id
+        #   Agent unique ID
+        # @param [String] group_id
+        #   Group ID
+        # @option options [Bool] force_single_group
+        #   Whether to append new group to current agent’s group or replace it.
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group
+        def add_agent_to_group(agent_id, group_id, options = {})
+          put "/agents/#{agent_id}/group/#{group_id}", options
+        end
+
+        # Create a group
+        # Creates a new group.
+        #
+        # @param [String] group_id
+        #   Group ID
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#create-a-group
+        def create_group(group_id)
+          put "/agents/groups/#{group_id}"
+        end
+
+        # Get a file in group
+        # Returns the specified file belonging to the group parsed to JSON.
+        #
+        # @param [String] group_id
+        #   Group ID
+        # @param [String] filename
+        #   Filename
+        # @option options [String] type
+        # @option options [String] format
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group
+        def get_file_in_group(group_id, filename, options = {})
+          get "agents/groups/#{group_id}/files/#{filename}", options
+        end
+
+        # Get agents in a group
+        # Returns the list of agents in a group.
+        #
+        # @param [String] group_id
+        #   Group ID
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @option options [String] select
+        # @option options [String] sort
+        # @option options [String] search
+        # @option options [String] status
+        # @option options [String] q
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group
+        def agents_by_group(group_id, options = {})
+          get "/agents/groups/#{group_id}", options
+        end
+
+        # Get agents without group
+        # Returns a list with the available agents without group.
+        #
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @option options [String] select
+        # @option options [String] sort
+        # @option options [String] search
+        # @option options [String] status
+        # @option options [String] q
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-without-group
+        def agents_by_no_group(options = {})
+          get 'agents/no_group', options
+        end
+
+        # Get group configuration
+        #
+        # @param [String] group_id
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-configuration
+        def group_configuration(group_id, options = {})
+          get "/agents/groups/#{group_id}/configuration", options
+        end
+
+        # Get group files
+        # Returns the files belonging to the group.
+        #
+        # @param [String] group_id
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @option options [String] sort
+        # @option options [String] search
+        # @option options [String] hash
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-files
+        def group_files(group_id, options = {})
+          get "/agents/groups/#{group_id}/files", options
+        end
+
+        # Get groups
+        # Returns the list of existing agent groups.
+        #
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @option options [String] sort
+        # @option options [String] search
+        # @option options [String] hash
+        # @option options [String] q
+        def groups(options = {})
+          get '/agents/groups', options
+        end
+
+        # Put configuration file (agent.conf) into a group
+        # Upload the group configuration (agent.conf).
+        #
+        # @param [String] group_id
+        # @param [String] config
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#put-configuration-file-agent-conf-into-a-group
+        def update_group_ossec_configuration(group_id, config)
+          # post "/agents/groups/#{group_id}/configuration"
+          # TODO : use Content-type: application/xml
+          raise "This method not yet implement"
+        end
+
+        # Remove a single group of an agent
+        # Remove the group of the agent but will leave the rest of its group if it belongs to a multigroup.
+        #
+        # @param [String] agent_id
+        # @param [String] group_id
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-an-agent
+        def remove_agent_of_group(agent_id, group_id)
+          delete "/agents/#{agent_id}/group/#{group_id}"
+        end
+
+        # Remove a single group of multiple agents
+        # Remove a list of agents of a group.
+        #
+        # @param [String] ids
+        # @param [String] group_id
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-multiple-agents
+        def remove_agents_of_group(ids, groups)
+          delete "/agents/group/#{group_id}", {ids: ids}
+        end
+
+        # Remove all agent groups.
+        # Removes the group of the agent. The agent will automatically revert to the ‘default’ group.
+        #
+        # @param [String] agent_id
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-all-agent-groups
+        def remove_all_agent_of_group(agent_id)
+          delete "/agents/#{agent_id}/group"
+        end
+
+        # Remove group
+        # Removes the group. Agents that were assigned to the removed group will automatically revert to the ‘default’ group.
+        #
+        # @param [String] group_id
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-group
+        def remove_group(group_id)
+          delete "/agents/groups/#{group_id}"
+        end
+
+        # Get OS summary
+        # Returns a summary of the OS.
+        #
+        # @option options [Number] offset
+        # @option options [Number] limit
+        # @option options [String] sort
+        # @option options [String] search
+        # @option options [String] q
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-os-summary
+        def agent_os_summary(options = {})
+          get "/agents/summary/os"
+        end
+
+        # Get agents summary
+        # Returns a summary of the available agents.
+        #
+        # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-summary
+        def agent_summary
+          get "/agents/summary"
         end
       end
     end

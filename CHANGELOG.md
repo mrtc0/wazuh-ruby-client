@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+- Added some methods for agents and groups
+  - `delete_agent()`
+  - `agent_config()`
+  - `delete_agent_by_group()`
+  - `agent_sync_status()`
+  - `add_agents_to_group()`
+  - `add_agent_to_group()`
+  - `create_group()`
+  - `get_file_in_group()`
+  - `agents_by_group()`
+  - `agents_by_no_group()`
+  - `group_configuration()`
+  - `group_files()`
+  - `groups()`
+  - `update_group_ossec_configuration()`
+  - `remove_agent_of_group()`
+  - `remvoe_agents_of_group()`
+  - `remove_all_agent_of_group()`
+  - `remove_group()`
+  - `agent_os_summary()`
+  - `agent_summary()`
+
 ## [0.2.2] - 2019-02-18
 
 - Added options to `syscheck_files()`
