@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.2] - 2019-02-18
+
+- Added options to `syscheck_files()`
+
 ## [0.2.1] - 2019-02-10
 
 - Fix `syscheck_files()` duplicated and confused
