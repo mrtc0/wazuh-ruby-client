@@ -366,13 +366,15 @@ the beginning to list in ascending or descending order.</p>
 
 25
 26
-27</pre>
+27
+28</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_decoders'>all_decoders</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -548,15 +550,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-51
 52
-53</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_decoders_files'>all_decoders_files</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -680,15 +684,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+69
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_parent_decoders'>all_parent_decoders</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders/parents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/decoders/parents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -830,15 +836,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-85
-86
-87</pre>
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/decoders.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_decoders_by_name'>decoders_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_decoder_name'>decoder_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/decoders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_decoder_name'>decoder_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/decoders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_decoder_name'>decoder_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -850,7 +858,7 @@ the beginning to list in ascending or descending order.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:40 2020 by
+  Generated on Tue Feb 18 20:12:28 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

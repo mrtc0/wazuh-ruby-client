@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Wazuh::Api::Errors::WazuhError
+  Exception: Wazuh::Api::Errors::WazuhError
   
     &mdash; Documentation by YARD 0.9.16
   
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Wazuh::Api::Errors::WazuhError
+      <div id="content"><h1>Exception: Wazuh::Api::Errors::WazuhError
   
   
   
@@ -69,12 +69,12 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName">Faraday::Error</span>
+      <span class="inheritName">StandardError</span>
       
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">Faraday::Error</li>
+            <li class="next">StandardError</li>
           
             <li class="next">Wazuh::Api::Errors::WazuhError</li>
           
@@ -107,6 +107,35 @@
 
   <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#message-instance_method" title="#message (instance method)">#<strong>message</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute message.</p>
+</div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -218,8 +247,8 @@
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/errors/wazuh_error.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@response</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span>
-  <span class='kw'>super</span> <span class='id identifier rubyid_message'>message</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -234,7 +263,50 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="response-instance_method">
+  <h3 class="signature first" id="message-instance_method">
+  
+    #<strong>message</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/errors/wazuh_error.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
+  <span class='ivar'>@message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="response-instance_method">
   
     #<strong>response</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
@@ -280,7 +352,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:41 2020 by
+  Generated on Tue Feb 18 20:12:29 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

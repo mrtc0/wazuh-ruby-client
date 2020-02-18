@@ -865,12 +865,12 @@ JSON format.</p>
       <pre class="lines">
 
 
-116
 117
-118</pre>
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_analysisd_stats'>manager_analysisd_stats</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/analysisd</span><span class='tstring_end'>&#39;</span></span>
@@ -1063,13 +1063,15 @@ decoder_dir, etc.</p>
 
 92
 93
-94</pre>
+94
+95</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_log'>manager_log</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/logs</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/logs</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1109,12 +1111,12 @@ decoder_dir, etc.</p>
       <pre class="lines">
 
 
-150
 151
-152</pre>
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_remoted_stats'>manager_remoted_stats</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/remoted</span><span class='tstring_end'>&#39;</span></span>
@@ -1202,12 +1204,12 @@ specified date.</p>
       <pre class="lines">
 
 
-126
 127
-128</pre>
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_stats'>manager_stats</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1252,12 +1254,12 @@ hour.</p>
       <pre class="lines">
 
 
-134
 135
-136</pre>
+136
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_stats_by_hour'>manager_stats_by_hour</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/hourly</span><span class='tstring_end'>&#39;</span></span>
@@ -1302,12 +1304,12 @@ that specific day.</p>
       <pre class="lines">
 
 
-142
 143
-144</pre>
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_stats_by_weekly'>manager_stats_by_weekly</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/stats/weekly</span><span class='tstring_end'>&#39;</span></span>
@@ -1399,12 +1401,12 @@ that specific day.</p>
       <pre class="lines">
 
 
-100
 101
-102</pre>
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_manager_summary_log'>manager_summary_log</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/logs/summary</span><span class='tstring_end'>&#39;</span></span>
@@ -1447,12 +1449,12 @@ that specific day.</p>
       <pre class="lines">
 
 
-108
 109
-110</pre>
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/manager.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_manager'>restart_manager</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/manager/restart</span><span class='tstring_end'>&#39;</span></span>
@@ -1586,7 +1588,7 @@ content is not strictly correct. False by default.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:40 2020 by
+  Generated on Tue Feb 18 20:12:28 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

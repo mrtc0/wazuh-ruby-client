@@ -619,13 +619,15 @@ the beginning to list in ascending or descending order.</p>
 
 40
 41
-42</pre>
+42
+43</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_netaddr'>netaddr</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netaddr</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netaddr</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -912,15 +914,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-76
 77
-78</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_netiface'>netiface</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netiface</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netiface</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1122,15 +1126,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-102
-103
-104</pre>
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_netproto'>netproto</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netproto</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/netproto</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1227,12 +1233,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-112
-113
-114</pre>
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_os'>os</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/os</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1450,15 +1456,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-140
-141
-142</pre>
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_packages'>packages</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/packages</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/packages</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1699,15 +1707,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-173
-174
-175</pre>
+177
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ports'>ports</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/ports</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/ports</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2039,15 +2049,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-221
-222
-223</pre>
+226
+227
+228
+229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/syscollector.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_processes'>processes</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/processes</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/syscollector/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/processes</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2059,7 +2071,7 @@ the beginning to list in ascending or descending order.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:41 2020 by
+  Generated on Tue Feb 18 20:12:28 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

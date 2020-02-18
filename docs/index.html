@@ -59,6 +59,10 @@
 
       <div id="content"><div id='filecontents'><h1>Wazuh Ruby Client</h1>
 
+<p><a href="https://github.com/mrtc0/wazuh-ruby-client/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+<img src="https://github.com/mrtc0/wazuh-ruby-client/workflows/GitHub%20Workflow/badge.svg" alt="">
+<a href="https://mrtc0.github.io/wazuh-ruby-client"><img src="http://img.shields.io/badge/yard-docs-blue.svg" alt="Yard Docs"></a></p>
+
 <p>A Ruby client for the wazuh APIs.</p>
 
 <h2>Installation</h2>
@@ -106,7 +110,126 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <span class='kw'>end</span>
 </code></pre>
 
-<h2>Support API</h2>
+<h3>Global Settings</h3>
+
+<p>The following global settings are supported via <code>Wazuh.configure</code> .</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">setting</th>
+<th style="text-align: left">description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">user_agent</td>
+<td style="text-align: left">User-Agent</td>
+</tr>
+<tr>
+<td style="text-align: left">client_cert</td>
+<td style="text-align: left">Client certificate (if use Client Certificate Authentication)</td>
+</tr>
+<tr>
+<td style="text-align: left">client_key</td>
+<td style="text-align: left">Client Key (if use Client Certificate Authentication)</td>
+</tr>
+<tr>
+<td style="text-align: left">basic_user</td>
+<td style="text-align: left">Basic Authentication user name</td>
+</tr>
+<tr>
+<td style="text-align: left">basic_password</td>
+<td style="text-align: left">Basic Authentication password</td>
+</tr>
+<tr>
+<td style="text-align: left">verify_ssl</td>
+<td style="text-align: left">Skip the SSL/TLS verify</td>
+</tr>
+<tr>
+<td style="text-align: left">logger</td>
+<td style="text-align: left">loggeer object</td>
+</tr>
+<tr>
+<td style="text-align: left">endpoint</td>
+<td style="text-align: left">Wazuh API endpoint URL</td>
+</tr>
+</tbody></table>
+
+<h3>Agents</h3>
+
+<p>Get all agents list.</p>
+
+<pre class="code ruby"><code class="ruby">&gt; client.all_agents
+=&gt; [
+      {
+        :os=&gt;{
+          :arch=&gt;&quot;x86_64&quot;,
+          :codename=&gt;&quot;Xenial Xerus&quot;,
+          :major=&gt;&quot;16&quot;,
+          :minor=&gt;&quot;04&quot;,
+          :name=&gt;&quot;Ubuntu&quot;,
+          :platform=&gt;&quot;ubuntu&quot;,
+          :uname=&gt;&quot;Linux |wazuh-manager |4.15.0-60-generic |#67-Ubuntu SMP Thu Aug 22 16:55:30 UTC 2019 |x86_64&quot;,
+          :version=&gt;&quot;16.04.6 LTS&quot;
+        },
+        :manager=&gt;&quot;wazuh-manager&quot;,
+        :id=&gt;&quot;000&quot;,
+        :registerIP=&gt;&quot;127.0.0.1&quot;,
+        :name=&gt;&quot;wazuh-manager&quot;,
+        :version=&gt;&quot;Wazuh v3.11.0&quot;,
+        :ip=&gt;&quot;127.0.0.1&quot;,
+        :dateAdd=&gt;&quot;2020-01-27 17:02:18&quot;,
+        :status=&gt;&quot;Active&quot;,
+        :lastKeepAlive=&gt;&quot;9999-12-31 23:59:59&quot;,
+        :node_name=&gt;&quot;wazuh-master-1&quot;
+      },
+      ...
+  ]
+
+&gt; agents.first.os.name
+=&gt; &quot;Ubuntu&quot;
+
+&gt; agents.first.id
+=&gt; &quot;000&quot;
+</code></pre>
+
+<p>filter by options. (see <a href="https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints/Agents.html#all_agents-instance_method">https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints/Agents.html#all_agents-instance_method</a> )</p>
+
+<pre class="code ruby"><code class="ruby"># Filter by status is active
+&gt; client.all_agents({ status: &#39;active&#39; })
+# Filter by agent os.name is ubuntu
+&gt; client.all_agents({ &#39;os.name&#39; =&gt; &#39;ubuntu&#39; })
+</code></pre>
+
+<h3>Syscollector</h3>
+
+<p>List agent&#39;s packages.</p>
+
+<pre class="code ruby"><code class="ruby">&gt; client.packages(&#39;000&#39;).map { |package| package.name }
+=&gt; [&quot;python-apt-common&quot;,
+ &quot;python-idna&quot;,
+ &quot;libedit2&quot;,
+ &quot;libncurses5&quot;,
+ &quot;libpam-runtime&quot;,
+ &quot;python3.5&quot;,
+ &quot;libgsasl7&quot;,
+ &quot;vim-tiny&quot;,
+ ...
+</code></pre>
+
+<p>List agents&#39; processes.</p>
+
+<pre class="code ruby"><code class="ruby">&gt; client.packages(&#39;000&#39;).map { |package| package.name }
+=&gt; [&quot;entrypoint.sh&quot;,
+ &quot;my_init&quot;,
+ &quot;syslog-ng&quot;,
+ &quot;runsvdir&quot;,
+ &quot;runsv&quot;,
+ ...
+</code></pre>
+
+<h3>Other</h3>
+
+<p>wazuh-ruby-client is support to all Wazuh API.  </p>
 
 <ul>
 <li>[x] Active Response</li>
@@ -126,13 +249,26 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <li>[x] Syscollector</li>
 </ul>
 
+<p>Refer to the document of wazuh-ruby-client and Wazuh API Reference for the list of all available methods.</p>
+
+<ul>
+<li><a href="https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints.html">https://mrtc0.github.io/wazuh-ruby-client/Wazuh/Api/Endpoints.html</a></li>
+<li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html">https://documentation.wazuh.com/3.10/user-manual/api/reference.html</a></li>
+</ul>
+
 <h2>Contributing</h2>
 
 <p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/mrtc0/wazuh-ruby-client">https://github.com/mrtc0/wazuh-ruby-client</a>.</p>
+
+<h2>Copyright and License</h2>
+
+<p>Copyright (c) 2015-2019, <a href="https://blog.ssrf.in">Kohei Morita</a></p>
+
+<p>This project is licensed under the <a href="https://github.com/mrtc0/wazuh-ruby-client/blob/master/LICENSE">MIT License</a> .</p>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:39 2020 by
+  Generated on Tue Feb 18 20:12:27 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

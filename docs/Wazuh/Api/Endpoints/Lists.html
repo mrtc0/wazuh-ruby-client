@@ -106,7 +106,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#cdb_files-instance_method" title="#cdb_files (instance method)">#<strong>cdb_files</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#cdb_files_path-instance_method" title="#cdb_files_path (instance method)">#<strong>cdb_files_path</strong>(options = {})  &#x21d2; Object </a>
     
 
     
@@ -161,9 +161,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="cdb_files-instance_method">
+  <h3 class="signature first" id="cdb_files_path-instance_method">
   
-    #<strong>cdb_files</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>cdb_files_path</strong>(options = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -277,15 +277,17 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-36
 37
-38</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/lists.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/lists.rb', line 37</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_cdb_files'>cdb_files</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/lists/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_cdb_files_path'>cdb_files_path</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/lists/files</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -424,13 +426,15 @@ the beginning to list in ascending or descending order.</p>
 
 20
 21
-22</pre>
+22
+23</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/lists.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cdb_lists'>cdb_lists</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/lists</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/lists</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -442,7 +446,7 @@ the beginning to list in ascending or descending order.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:40 2020 by
+  Generated on Tue Feb 18 20:12:27 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

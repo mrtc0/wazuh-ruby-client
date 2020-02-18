@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Module: Wazuh::Faraday::Request
+  Module: Wazuh::Sawyer::Request
   
     &mdash; Documentation by YARD 0.9.16
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Wazuh::Faraday::Request";
+  pathId = "Wazuh::Sawyer::Request";
   relpath = '../../';
 </script>
 
@@ -37,7 +37,7 @@
         <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Faraday.html" title="Wazuh::Faraday (module)">Faraday</a></span></span>
+    <span class='title'><span class='object_link'><a href="../../Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Sawyer.html" title="Wazuh::Sawyer (module)">Sawyer</a></span></span>
      &raquo; 
     <span class="title">Request</span>
   
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Module: Wazuh::Faraday::Request
+      <div id="content"><h1>Module: Wazuh::Sawyer::Request
   
   
   
@@ -83,7 +83,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/wazuh/faraday/request.rb</dd>
+    <dd>lib/wazuh/sawyer/request.rb</dd>
   </dl>
   
 </div>
@@ -220,7 +220,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/faraday/request.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/sawyer/request.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='symbol'>:delete</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -250,7 +250,7 @@
 7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/faraday/request.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/sawyer/request.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='symbol'>:get</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -280,7 +280,7 @@
 11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/faraday/request.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/sawyer/request.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='symbol'>:post</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -310,7 +310,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/faraday/request.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/sawyer/request.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='symbol'>:put</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -325,7 +325,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:40 2020 by
+  Generated on Tue Feb 18 20:12:27 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>

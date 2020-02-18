@@ -130,7 +130,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_agent_quick-instance_method" title="#add_agent_quick (instance method)">#<strong>add_agent_quick</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#add_agent_quick-instance_method" title="#add_agent_quick (instance method)">#<strong>add_agent_quick</strong>(agent_name)  &#x21d2; Object </a>
     
 
     
@@ -154,7 +154,56 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#agent-instance_method" title="#agent (instance method)">#<strong>agent</strong>(agent_id, options = {})  &#x21d2; Object </a>
+      <a href="#add_agent_to_group-instance_method" title="#add_agent_to_group (instance method)">#<strong>add_agent_to_group</strong>(agent_id, group_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add agent group Adds an agent to the specified group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_agents_to_group-instance_method" title="#add_agents_to_group (instance method)">#<strong>add_agents_to_group</strong>(ids, group_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a list of agents to a group Adds a list of agents to the specified
+group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent-instance_method" title="#agent (instance method)">#<strong>agent</strong>(agent_id, options = {})  &#x21d2; Sawyer::Resource </a>
     
 
     
@@ -178,7 +227,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#agent_by_name-instance_method" title="#agent_by_name (instance method)">#<strong>agent_by_name</strong>(agent_name, options = {})  &#x21d2; Object </a>
+      <a href="#agent_by_name-instance_method" title="#agent_by_name (instance method)">#<strong>agent_by_name</strong>(agent_name, options = {})  &#x21d2; Sawyer::Resource </a>
     
 
     
@@ -202,7 +251,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#agent_key-instance_method" title="#agent_key (instance method)">#<strong>agent_key</strong>(agent_id, options = {})  &#x21d2; Object </a>
+      <a href="#agent_config-instance_method" title="#agent_config (instance method)">#<strong>agent_config</strong>(agent_id, component, configuration)  &#x21d2; Object </a>
     
 
     
@@ -217,7 +266,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the key of an agent.</p>
+<p>Get active configuration.</p>
 </div></span>
   
 </li>
@@ -226,7 +275,152 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#all_agents-instance_method" title="#all_agents (instance method)">#<strong>all_agents</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#agent_key-instance_method" title="#agent_key (instance method)">#<strong>agent_key</strong>(agent_id, options = {})  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get agent key Returns the key of an agent.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent_os_summary-instance_method" title="#agent_os_summary (instance method)">#<strong>agent_os_summary</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get OS summary Returns a summary of the OS.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent_summary-instance_method" title="#agent_summary (instance method)">#<strong>agent_summary</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get agents summary Returns a summary of the available agents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent_sync_status-instance_method" title="#agent_sync_status (instance method)">#<strong>agent_sync_status</strong>(agent_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get sync status of agent Returns the sync status in JSON format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agents_by_group-instance_method" title="#agents_by_group (instance method)">#<strong>agents_by_group</strong>(group_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get agents in a group Returns the list of agents in a group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agents_by_no_group-instance_method" title="#agents_by_no_group (instance method)">#<strong>agents_by_no_group</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get agents without group Returns a list with the available agents without
+group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all_agents-instance_method" title="#all_agents (instance method)">#<strong>all_agents</strong>(options = {})  &#x21d2; Array </a>
     
 
     
@@ -242,6 +436,103 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Returns a list with the available agents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_group-instance_method" title="#create_group (instance method)">#<strong>create_group</strong>(group_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a group Creates a new group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_agent-instance_method" title="#delete_agent (instance method)">#<strong>delete_agent</strong>(agent_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete an agent Removes an agent.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_agent_by_group-instance_method" title="#delete_agent_by_group (instance method)">#<strong>delete_agent_by_group</strong>(ids)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a list of groups.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_agents-instance_method" title="#delete_agents (instance method)">#<strong>delete_agents</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete agents Removes agents, using a list of them or a criterion based on
+the status or time of the last connection.</p>
 </div></span>
   
 </li>
@@ -267,6 +558,103 @@
     <span class="summary_desc"><div class='inline'>
 <p>Returns all the different combinations that agents have for the selected
 fields.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_file_in_group-instance_method" title="#get_file_in_group (instance method)">#<strong>get_file_in_group</strong>(group_id, filename, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a file in group Returns the specified file belonging to the group
+parsed to JSON.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_configuration-instance_method" title="#group_configuration (instance method)">#<strong>group_configuration</strong>(group_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get group configuration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group_files-instance_method" title="#group_files (instance method)">#<strong>group_files</strong>(group_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get group files Returns the files belonging to the group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#groups-instance_method" title="#groups (instance method)">#<strong>groups</strong>(options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get groups Returns the list of existing agent groups.</p>
 </div></span>
   
 </li>
@@ -315,6 +703,104 @@ fields.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>Returns the list of outdated agents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_agent_of_group-instance_method" title="#remove_agent_of_group (instance method)">#<strong>remove_agent_of_group</strong>(agent_id, group_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a single group of an agent Remove the group of the agent but will
+leave the rest of its group if it belongs to a multigroup.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_agents_of_group-instance_method" title="#remove_agents_of_group (instance method)">#<strong>remove_agents_of_group</strong>(ids, groups)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove a single group of multiple agents Remove a list of agents of a
+group.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_all_agent_of_group-instance_method" title="#remove_all_agent_of_group (instance method)">#<strong>remove_all_agent_of_group</strong>(agent_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove all agent groups.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_group-instance_method" title="#remove_group (instance method)">#<strong>remove_group</strong>(group_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove group Removes the group.</p>
 </div></span>
   
 </li>
@@ -387,6 +873,31 @@ fields.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>Restart an agent.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_group_ossec_configuration-instance_method" title="#update_group_ossec_configuration (instance method)">#<strong>update_group_ossec_configuration</strong>(group_id, config)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Put configuration file (agent.conf) into a group Upload the group
+configuration (agent.conf).</p>
 </div></span>
   
 </li>
@@ -531,12 +1042,12 @@ seconds.</p>
       <pre class="lines">
 
 
-143
-144
-145</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_agent'>add_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -549,7 +1060,7 @@ seconds.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_agent_quick-instance_method">
   
-    #<strong>add_agent_quick</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>add_agent_quick</strong>(agent_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -566,6 +1077,106 @@ seconds.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name to agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_agent_quick'>add_agent_quick</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_agent_to_group-instance_method">
+  
+    #<strong>add_agent_to_group</strong>(agent_id, group_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add agent group Adds an agent to the specified group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Agent unique ID</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Group ID</p>
+</div>
+      
+    </li>
   
     <li>
       
@@ -590,18 +1201,22 @@ seconds.</p>
   
     
     
+    
+    
+    
+    
     <p class="tag_title">Options Hash (<tt>options</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">:name</span>
-          <span class="type">(<tt>name</tt>)</span>
+          <span class="name">force_single_group</span>
+          <span class="type">(<tt>Bool</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>Name to agent</p>
+<p>Whether to append new group to current agent’s group or replace it.</p>
 </div>
           
         </li>
@@ -613,7 +1228,7 @@ seconds.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#add-agent-quick-method</a></li>
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group</a></li>
     
   </ul>
 
@@ -623,15 +1238,95 @@ seconds.</p>
       <pre class="lines">
 
 
-152
-153
-154</pre>
+251
+252
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 251</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_add_agent_quick'>add_agent_quick</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_add_agent_to_group'>add_agent_to_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_agents_to_group-instance_method">
+  
+    #<strong>add_agents_to_group</strong>(ids, group_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a list of agents to a group Adds a list of agents to the specified
+group</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>Array[String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of agent ID</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-a-list-of-agents-to-a-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-a-list-of-agents-to-a-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-a-list-of-agents-to-a-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_agents_to_group'>add_agents_to_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -641,7 +1336,7 @@ seconds.</p>
       <div class="method_details ">
   <h3 class="signature " id="agent-instance_method">
   
-    #<strong>agent</strong>(agent_id, options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>agent</strong>(agent_id, options = {})  &#x21d2; <tt>Sawyer::Resource</tt> 
   
 
   
@@ -719,6 +1414,24 @@ seconds.</p>
     </ul>
   
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Sawyer::Resource</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Returns Sawyer::Resource</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -733,12 +1446,12 @@ seconds.</p>
       <pre class="lines">
 
 
-37
 38
-39</pre>
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent'>agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -751,7 +1464,7 @@ seconds.</p>
       <div class="method_details ">
   <h3 class="signature " id="agent_by_name-instance_method">
   
-    #<strong>agent_by_name</strong>(agent_name, options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>agent_by_name</strong>(agent_name, options = {})  &#x21d2; <tt>Sawyer::Resource</tt> 
   
 
   
@@ -829,6 +1542,24 @@ seconds.</p>
     </ul>
   
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Sawyer::Resource</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Returns Sawyer::Resource</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -843,12 +1574,12 @@ seconds.</p>
       <pre class="lines">
 
 
-48
-49
-50</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_by_name'>agent_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/name/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -859,9 +1590,9 @@ seconds.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="agent_key-instance_method">
+  <h3 class="signature " id="agent_config-instance_method">
   
-    #<strong>agent_key</strong>(agent_id, options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>agent_config</strong>(agent_id, component, configuration)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -870,7 +1601,102 @@ seconds.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the key of an agent.</p>
+<p>Get active configuration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>component</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Selected component. Alowed values see document</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>configuration</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Selected component. Alowed values see document</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-active-configuration" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-active-configuration">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-active-configuration</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_config'>agent_config</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_configuration'>configuration</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agent_key-instance_method">
+  
+    #<strong>agent_key</strong>(agent_id, options = {})  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get agent key Returns the key of an agent.</p>
 
 
   </div>
@@ -897,6 +1723,24 @@ seconds.</p>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Returns the key of an agent</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -911,12 +1755,12 @@ seconds.</p>
       <pre class="lines">
 
 
-57
-58
-59</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_key'>agent_key</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/key</span><span class='tstring_end'>&quot;</span></span>
@@ -927,9 +1771,552 @@ seconds.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="agent_os_summary-instance_method">
+  
+    #<strong>agent_os_summary</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get OS summary Returns a summary of the OS.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">sort</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">q</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-os-summary" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-os-summary">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-os-summary</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 407</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_os_summary'>agent_os_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/summary/os</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agent_summary-instance_method">
+  
+    #<strong>agent_summary</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get agents summary Returns a summary of the available agents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-summary" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-summary">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-summary</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+415
+416
+417</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 415</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_summary'>agent_summary</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/summary</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agent_sync_status-instance_method">
+  
+    #<strong>agent_sync_status</strong>(agent_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get sync status of agent Returns the sync status in JSON format</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Agent ID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-sync-status-of-agent" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-sync-status-of-agent">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-sync-status-of-agent</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 226</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_sync_status'>agent_sync_status</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agent/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/is_sync</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agents_by_group-instance_method">
+  
+    #<strong>agents_by_group</strong>(group_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get agents in a group Returns the list of agents in a group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Group ID</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">select</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">sort</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">status</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">q</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 292</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agents_by_group'>agents_by_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agents_by_no_group-instance_method">
+  
+    #<strong>agents_by_no_group</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get agents without group Returns a list with the available agents without
+group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">select</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">sort</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">status</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">q</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-without-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-without-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-without-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+307
+308
+309</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 307</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agents_by_no_group'>agents_by_no_group</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>agents/no_group</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="all_agents-instance_method">
   
-    #<strong>all_agents</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>all_agents</strong>(options = {})  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -975,7 +2362,7 @@ seconds.</p>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt>offset</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -988,7 +2375,7 @@ seconds.</p>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt>limit</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1001,7 +2388,7 @@ seconds.</p>
       
         <li>
           <span class="name">:select</span>
-          <span class="type">(<tt>select</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1014,7 +2401,7 @@ seconds.</p>
       
         <li>
           <span class="name">:sort</span>
-          <span class="type">(<tt>sort</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1028,7 +2415,7 @@ the beginning to list in ascending or descending order.</p>
       
         <li>
           <span class="name">:search</span>
-          <span class="type">(<tt>search</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1041,7 +2428,7 @@ the beginning to list in ascending or descending order.</p>
       
         <li>
           <span class="name">:status</span>
-          <span class="type">(<tt>status</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1054,21 +2441,8 @@ values: active, pending, neverconnected, disconnected</p>
         </li>
       
         <li>
-          <span class="name">:q</span>
-          <span class="type">(<tt>q</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Query to filter results by. For example q=”status=Active”</p>
-</div>
-          
-        </li>
-      
-        <li>
           <span class="name">:order_than</span>
-          <span class="type">(<tt>order_than</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
@@ -1084,6 +2458,24 @@ connected agents, uses the register date.</p>
     </ul>
   
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Returns Array containing agents</p>
+</div>
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -1098,15 +2490,383 @@ connected agents, uses the register date.</p>
       <pre class="lines">
 
 
+25
 26
 27
 28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_agents'>all_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_group-instance_method">
+  
+    #<strong>create_group</strong>(group_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a group Creates a new group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Group ID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#create-a-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#create-a-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#create-a-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_group'>create_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_agent-instance_method">
+  
+    #<strong>delete_agent</strong>(agent_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete an agent Removes an agent.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">purge</span>
+          <span class="type">(<tt>Bool</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Delete an agent from the key store. This parameter is only valid if purge
+is set to no in the manager’s ossec.conf.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-an-agent" target="_parent" title="https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-an-agent">https://documentation.wazuh.com/3.10/user-manual/api/reference.html#delete-an-agent</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_agent'>delete_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_agent_by_group-instance_method">
+  
+    #<strong>delete_agent_by_group</strong>(ids)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete a list of groups</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://documentation.wazuh.com/3.11/user-manual/api/reference.html#delete-a-list-of-groups" target="_parent" title="http://documentation.wazuh.com/3.11/user-manual/api/reference.html#delete-a-list-of-groups">http://documentation.wazuh.com/3.11/user-manual/api/reference.html#delete-a-list-of-groups</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 216</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_agent_by_group'>delete_agent_by_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/groups</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_agents-instance_method">
+  
+    #<strong>delete_agents</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete agents Removes agents, using a list of them or a criterion based on
+the status or time of the last connection.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">ids</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Agent IDs separated by commas.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">purge</span>
+          <span class="type">(<tt>Bool</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Delete an agent from the key store. This parameter is only valid if purge
+is set to no in the manager’s ossec.conf.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">status</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Filters by agent status. Use commas to enter multiple statuses. Allowed
+values: active, pending, neverconnected, disconnected</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">older_than</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Filters out disconnected agents for longer than specified. Time in seconds,
+‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never
+connected agents, uses the register date. Default value: 7d.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_agents'>delete_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1271,15 +3031,522 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-102
-103
-104</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_distinct_fields_in_agents'>distinct_fields_in_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/stats/distinct</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_file_in_group-instance_method">
+  
+    #<strong>get_file_in_group</strong>(group_id, filename, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a file in group Returns the specified file belonging to the group
+parsed to JSON.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Group ID</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Filename</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">type</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">format</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#add-agent-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+275
+276
+277</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 275</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_file_in_group'>get_file_in_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/files/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filename'>filename</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group_configuration-instance_method">
+  
+    #<strong>group_configuration</strong>(group_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get group configuration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-configuration" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-configuration">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-configuration</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 317</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group_configuration'>group_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/configuration</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group_files-instance_method">
+  
+    #<strong>group_files</strong>(group_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get group files Returns the files belonging to the group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">sort</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">hash</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-files" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-files">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-group-files</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+331
+332
+333</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 331</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group_files'>group_files</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/files</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="groups-instance_method">
+  
+    #<strong>groups</strong>(options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get groups Returns the list of existing agent groups.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">offset</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">limit</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">sort</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">hash</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">q</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_groups'>groups</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/groups</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1411,12 +3678,12 @@ seconds.</p>
       <pre class="lines">
 
 
-169
-170
-171</pre>
+198
+199
+200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insert_agent'>insert_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/insert</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1543,15 +3810,293 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-117
-118
-119</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_outdated_agents'>outdated_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/outdated</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_agent_of_group-instance_method">
+  
+    #<strong>remove_agent_of_group</strong>(agent_id, group_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a single group of an agent Remove the group of the agent but will
+leave the rest of its group if it belongs to a multigroup.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-an-agent" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-an-agent">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-an-agent</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+366
+367
+368</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 366</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_agent_of_group'>remove_agent_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_agents_of_group-instance_method">
+  
+    #<strong>remove_agents_of_group</strong>(ids, groups)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove a single group of multiple agents Remove a list of agents of a
+group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-multiple-agents" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-multiple-agents">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-a-single-group-of-multiple-agents</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+376
+377
+378</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 376</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_agents_of_group'>remove_agents_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_all_agent_of_group-instance_method">
+  
+    #<strong>remove_all_agent_of_group</strong>(agent_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove all agent groups. Removes the group of the agent. The agent will
+automatically revert to the ‘default’ group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-all-agent-groups" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-all-agent-groups">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-all-agent-groups</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+385
+386
+387</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 385</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_all_agent_of_group'>remove_all_agent_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_group-instance_method">
+  
+    #<strong>remove_group</strong>(group_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove group Removes the group. Agents that were assigned to the removed
+group will automatically revert to the ‘default’ group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#remove-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 394</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_group'>remove_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1635,12 +4180,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-66
-67
-68</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_agents'>restart_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/restart</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1676,12 +4221,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-72
-73
-74</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_all_agents'>restart_all_agents</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/restart</span><span class='tstring_end'>&#39;</span></span>
@@ -1744,15 +4289,94 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-81
-82
-83</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_an_agents'>restart_an_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/restart</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_group_ossec_configuration-instance_method">
+  
+    #<strong>update_group_ossec_configuration</strong>(group_id, config)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Put configuration file (agent.conf) into a group Upload the group
+configuration (agent.conf).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>group_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>config</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#put-configuration-file-agent-conf-into-a-group" target="_parent" title="https://documentation.wazuh.com/3.11/user-manual/api/reference.html#put-configuration-file-agent-conf-into-a-group">https://documentation.wazuh.com/3.11/user-manual/api/reference.html#put-configuration-file-agent-conf-into-a-group</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 354</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_group_ossec_configuration'>update_group_ossec_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
+  <span class='comment'># post &quot;/agents/groups/#{group_id}/configuration&quot;
+</span>  <span class='comment'># TODO : use Content-type: application/xml
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This method not yet implement</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1847,12 +4471,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
-127
-128
-129</pre>
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_upgrade_result_from_agent'>upgrade_result_from_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/upgrade_result</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1867,7 +4491,7 @@ the beginning to list in ascending or descending order.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Jan 25 00:19:40 2020 by
+  Generated on Tue Feb 18 20:12:28 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.1).
 </div>
