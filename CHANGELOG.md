@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.3] - 2019-02-18
+
 - Added some methods for agents and groups
   - `delete_agent()`
   - `agent_config()`
