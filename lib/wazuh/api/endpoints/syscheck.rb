@@ -33,7 +33,7 @@ module Wazuh
         #   Returns the files with the specified hash (md5, sha1 or sha256).
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-syscheck-files
         def syscheck_files(agent_id, options = {})
-          data = get "/syscheck/#{agent_id}"
+          data = get "/syscheck/#{agent_id}", options
           data.items
         end
 
