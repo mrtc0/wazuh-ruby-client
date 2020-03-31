@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.4] - 2020-03-31
+
+- `agents_by_group` also returns the `item` field.
+
 ## [0.2.3] - 2019-02-18
 
 - Added some methods for agents and groups
