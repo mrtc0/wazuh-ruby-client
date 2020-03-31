@@ -290,7 +290,8 @@ module Wazuh
         # @option options [String] q
         # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group
         def agents_by_group(group_id, options = {})
-          get "/agents/groups/#{group_id}", options
+          data= get "/agents/groups/#{group_id}", options
+          data.items
         end
 
         # Get agents without group
