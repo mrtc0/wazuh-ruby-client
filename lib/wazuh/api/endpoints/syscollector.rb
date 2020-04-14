@@ -39,7 +39,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-address-info-of-an-agent
         def netaddr(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/netaddr", options
-          data.items
+          data
         end
 
         # Returns the agent’s network interface info
@@ -76,7 +76,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-interface-info-of-an-agent
         def netiface(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/netiface", options
-          data.items
+          data
         end
 
         # Returns the agent’s network protocol info.
@@ -103,7 +103,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-protocol-info-of-an-agent
         def netproto(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/netproto", options
-          data.items
+          data
         end
 
         # Returns the agent’s OS info.
@@ -142,7 +142,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-packages-info
         def packages(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/packages", options
-          data.items
+          data
         end
 
         # Get ports info of an agent
@@ -176,7 +176,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ports-info-of-an-agent
         def ports(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/ports", options
-          data.items
+          data
         end
 
         # Get processes info
@@ -225,7 +225,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-processes-info
         def processes(agent_id, options = {})
           data = get "/syscollector/#{agent_id}/processes", options
-          data.items
+          data
         end
       end
     end

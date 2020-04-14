@@ -34,7 +34,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-syscheck-files
         def syscheck_files(agent_id, options = {})
           data = get "/syscheck/#{agent_id}", options
-          data.items
+          data
         end
 
         # Clears the syscheck database for the specified agent.

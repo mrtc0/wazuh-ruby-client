@@ -23,8 +23,7 @@ module Wazuh
         # @return [Array] Returns Array containing agents
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-agents
         def all_agents(options = {})
-          data = get '/agents', options
-          data.items
+          get '/agents', options
         end
 
         # Returns various information from an agent.
@@ -290,8 +289,7 @@ module Wazuh
         # @option options [String] q
         # @see https://documentation.wazuh.com/3.11/user-manual/api/reference.html#get-agents-in-a-group
         def agents_by_group(group_id, options = {})
-          data = get "/agents/groups/#{group_id}", options
-          data.items
+          get "/agents/groups/#{group_id}", options
         end
 
         # Get agents without group

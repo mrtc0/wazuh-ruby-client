@@ -4,7 +4,7 @@ describe Wazuh::Api::Endpoints::Agents do
   describe '#all_agents', vcr: { cassette_name: 'api/endpoints/all_agents' } do
     it 'Returns a list with the available agents' do
       agents = client.all_agents
-      expect(agents.class).to eq Array
+      expect(agents.class).to eq Sawyer::Resource
     end
   end
 

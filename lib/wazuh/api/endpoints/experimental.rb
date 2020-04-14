@@ -43,7 +43,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-hardware-info-of-all-agents
         def experimental_hardware(options = {})
           data = get '/experimental/syscollector/hardware', options
-          data.items
+          data
         end
 
         # Get network address info of all agents
@@ -73,7 +73,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-address-info-of-all-agents
         def experimental_netaddr(options = {})
           data = get '/experimental/syscollector/netaddr', options
-          data.items
+          data
         end
 
         # Get network interface info of all agents
@@ -110,7 +110,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-interface-info-of-all-agents
         def experimental_netiface(options = {})
           data = get '/experimental/syscollector/netiface', options
-          data.items
+          data
         end
 
         # Get network protocol info of all agents
@@ -138,7 +138,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-protocol-info-of-all-agents
         def experimental_netproto(options = {})
           data = get '/experimental/syscollector/netproto', options
-          data.items
+          data
         end
 
         # Get os info of all agents
@@ -169,7 +169,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-os-info-of-all-agents
         def experimental_os(options = {})
           data = get '/experimentalsyscollector/os', options
-          data.items
+          data
         end
 
         # Get packages info of all agents
@@ -199,7 +199,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-packages-info-of-all-agents
         def experimental_packages(options = {})
           data = get '/experimental/syscollector/packages', options
-          data.items
+          data
         end
 
         # Get ports info of all agents
@@ -233,7 +233,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ports-info-of-all-agents
         def experimental_ports(options = {})
           data = get '/experimental/syscollector/ports', options
-          data.items
+          data
         end
 
         # Get processes info of all agents
@@ -281,7 +281,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-processes-info-of-all-agents
         def experimental_processes(options = {})
           data = get '/experimental/syscollector/processes', options
-          data.items
+          data
         end
 
         # Get CIS-CAT results
@@ -310,7 +310,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-cis-cat-results
         def experimental_ciscat_results(options = {})
           data = get '/experimental/ciscat/results', options
-          data.items
+          data
         end
       end
     end

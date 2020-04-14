@@ -36,7 +36,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-cis-cat-results-from-an-agent
         def ciscat_result(agent_id, options = {})
           data = get "/ciscat/#{agent_id}/results", options
-          data.items
+          data
         end
       end
     end

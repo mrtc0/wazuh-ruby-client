@@ -24,7 +24,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-decoders
         def all_decoders(options = {})
           data = get '/decoders', options
-          data.items
+          data
         end
 
         # Get all decoders files
@@ -51,7 +51,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-decoders-files
         def all_decoders_files(options = {})
           data = get '/decoders/files', options
-          data.items
+          data
         end
 
         # Get all parent decoders
@@ -68,7 +68,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-parent-decoders
         def all_parent_decoders(options = {})
           data = get '/decoders/parents', options
-          data.items
+          data
         end
 
         # Get decoders by name
@@ -87,7 +87,7 @@ module Wazuh
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-decoders-by-name
         def decoders_by_name(decoder_name, options = {})
           data = get "/decoders/#{decoder_name}", options
-          data.items
+          data
         end
       end
     end
