@@ -18,3 +18,4 @@ Gemfile.lock
 .env
 .bundle
 .DS_Store
+*.bak
