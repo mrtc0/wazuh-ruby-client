@@ -42,8 +42,7 @@ module Wazuh
         #   Filters by board_serial.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-hardware-info-of-all-agents
         def experimental_hardware(options = {})
-          data = get '/experimental/syscollector/hardware', options
-          data.items
+          offset_request('get', '/experimental/syscollector/hardware', options)
         end
 
         # Get network address info of all agents
@@ -72,8 +71,7 @@ module Wazuh
         #   Filters by netmask.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-address-info-of-all-agents
         def experimental_netaddr(options = {})
-          data = get '/experimental/syscollector/netaddr', options
-          data.items
+          offset_request('get', '/experimental/syscollector/netaddr', options)
         end
 
         # Get network interface info of all agents
@@ -109,8 +107,7 @@ module Wazuh
         # @option options [rx_dropped] :rx_dropped
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-interface-info-of-all-agents
         def experimental_netiface(options = {})
-          data = get '/experimental/syscollector/netiface', options
-          data.items
+          offset_request('get', '/experimental/syscollector/netiface', options)
         end
 
         # Get network protocol info of all agents
@@ -137,8 +134,7 @@ module Wazuh
         #   Filters by dhcp.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-protocol-info-of-all-agents
         def experimental_netproto(options = {})
-          data = get '/experimental/syscollector/netproto', options
-          data.items
+          offset_request('get', '/experimental/syscollector/netproto', options)
         end
 
         # Get os info of all agents
@@ -168,8 +164,7 @@ module Wazuh
         #   Filters by release.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-os-info-of-all-agents
         def experimental_os(options = {})
-          data = get '/experimentalsyscollector/os', options
-          data.items
+          offset_request('get', '/experimentalsyscollector/os', options)
         end
 
         # Get packages info of all agents
@@ -198,8 +193,7 @@ module Wazuh
         #   Filters by format.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-packages-info-of-all-agents
         def experimental_packages(options = {})
-          data = get '/experimental/syscollector/packages', options
-          data.items
+          offset_request('get', '/experimental/syscollector/packages', options)
         end
 
         # Get ports info of all agents
@@ -232,8 +226,7 @@ module Wazuh
         #   Filters by state.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ports-info-of-all-agents
         def experimental_ports(options = {})
-          data = get '/experimental/syscollector/ports', options
-          data.items
+          offset_request('get', '/experimental/syscollector/ports', options)
         end
 
         # Get processes info of all agents
@@ -280,8 +273,7 @@ module Wazuh
         #   Filters by process suser.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-processes-info-of-all-agents
         def experimental_processes(options = {})
-          data = get '/experimental/syscollector/processes', options
-          data.items
+          offset_request('get', '/experimental/syscollector/processes', options)
         end
 
         # Get CIS-CAT results
@@ -309,8 +301,7 @@ module Wazuh
         # @option options [score] :score
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-cis-cat-results
         def experimental_ciscat_results(options = {})
-          data = get '/experimental/ciscat/results', options
-          data.items
+          offset_request('get', '/experimental/ciscat/results', options)
         end
       end
     end

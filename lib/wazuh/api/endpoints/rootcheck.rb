@@ -39,8 +39,7 @@ module Wazuh
         # @option options [search] :search
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rootcheck-cis-requirements
         def rootcheck_cis_requirements(agent_id, options = {})
-          data = get "/rootcheck/#{agent_id}/cis", options
-          data.items
+          offset_request('get', "/rootcheck/#{agent_id}/cis", options)
         end
 
         # Get rootcheck database
@@ -56,8 +55,7 @@ module Wazuh
         # @option options [status] :status
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rootcheck-database
         def rootcheck_database(agent_id, options = {})
-          data = get "/rootcheck/#{agent_id}", options
-          data.items
+          offset_request('get', "/rootcheck/#{agent_id}", options)
         end
 
         # Get rootcheck pci requirements
@@ -70,8 +68,7 @@ module Wazuh
         # @option options [search] :search
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-rootcheck-pci-requirements
         def rootcheck_pic_requirements(agent_id, options = {})
-          data = get "/rootcheck/#{agent_id}/pci", options
-          data.items
+          offset_request('get', "/rootcheck/#{agent_id}/pci", options)
         end
 
         # Run rootcheck scan in all agents

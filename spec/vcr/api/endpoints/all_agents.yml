@@ -2,6 +2,128 @@
 http_interactions:
 - request:
     method: get
+    uri: https://wazuh.local:55000/agents?offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": {
+             "items": [
+                {
+                   "registerIP": "any",
+                   "name": "myNewAgent",
+                   "status": "Never connected",
+                   "dateAdd": "2019-08-30 09:31:02",
+                   "node_name": "unknown",
+                   "ip": "any",
+                   "id": "010"
+                },
+                {
+                   "os": {
+                      "arch": "x86_64",
+                      "major": "7",
+                      "minor": "6",
+                      "name": "CentOS Linux",
+                      "platform": "centos",
+                      "uname": "Linux |7084a5343d0a |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
+                      "version": "7.6"
+                   },
+                   "registerIP": "172.22.0.6",
+                   "name": "7084a5343d0a",
+                   "mergedSum": "6c2a4b148047e590188f8befe47c2bff",
+                   "status": "Active",
+                   "group": [
+                      "default"
+                   ],
+                   "dateAdd": "2019-08-30 09:18:12",
+                   "configSum": "ab73af41699f13fdd81903b5f23d8d00",
+                   "lastKeepAlive": "2019-08-30 09:31:04",
+                   "node_name": "worker-1",
+                   "ip": "172.22.0.6",
+                   "id": "002",
+                   "version": "Wazuh v3.10.2",
+                   "manager": "7995615e03c0"
+                },
+                {
+                   "os": {
+                      "arch": "x86_64",
+                      "major": "7",
+                      "minor": "6",
+                      "name": "CentOS Linux",
+                      "platform": "centos",
+                      "uname": "Linux |1b0e9cb1ec2a |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
+                      "version": "7.6"
+                   },
+                   "registerIP": "172.22.0.3",
+                   "name": "1b0e9cb1ec2a",
+                   "mergedSum": "6c2a4b148047e590188f8befe47c2bff",
+                   "status": "Active",
+                   "group": [
+                      "default"
+                   ],
+                   "dateAdd": "1970-01-01 00:00:00",
+                   "configSum": "ab73af41699f13fdd81903b5f23d8d00",
+                   "lastKeepAlive": "2019-08-30 09:31:03",
+                   "node_name": "master",
+                   "ip": "172.22.0.3",
+                   "id": "001",
+                   "version": "Wazuh v3.10.2",
+                   "manager": "1cb46c820ff5"
+                },
+                {
+                   "os": {
+                      "arch": "x86_64",
+                      "major": "7",
+                      "minor": "6",
+                      "name": "CentOS Linux",
+                      "platform": "centos",
+                      "uname": "Linux |1cb46c820ff5 |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
+                      "version": "7.6"
+                   },
+                   "registerIP": "127.0.0.1",
+                   "name": "1cb46c820ff5",
+                   "status": "Active",
+                   "dateAdd": "2019-08-30 08:02:33",
+                   "lastKeepAlive": "9999-12-31 23:59:59",
+                   "node_name": "master",
+                   "ip": "127.0.0.1",
+                   "id": "000",
+                   "version": "Wazuh v3.10.2",
+                   "manager": "1cb46c820ff5"
+                },
+                {
+                   "registerIP": "10.0.10.10",
+                   "name": "NewHost_2",
+                   "status": "Never connected",
+                   "dateAdd": "2019-08-30 09:31:03",
+                   "node_name": "unknown",
+                   "ip": "10.0.10.10",
+                   "id": "123"
+                }
+             ],
+             "totalItems": 10
+          }
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+- request:
+    method: get
     uri: https://wazuh.local:55000/agents
     body:
       encoding: US-ASCII
