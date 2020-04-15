@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+- Support agent upgrade endpoint
+  - `/agents/:agent_id/upgrade_custom`
+  - `/agents/:agent_id/upgrade`
+
 ## [0.2.5]
 
 - Get all items with `offset_request`
