@@ -38,8 +38,7 @@ module Wazuh
         #   Filters by netmask.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-address-info-of-an-agent
         def netaddr(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/netaddr", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/netaddr", options)
         end
 
         # Returns the agent’s network interface info
@@ -75,8 +74,7 @@ module Wazuh
         # @option options [rx_dropped] :rx_dropped
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-interface-info-of-an-agent
         def netiface(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/netiface", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/netiface", options)
         end
 
         # Returns the agent’s network protocol info.
@@ -102,8 +100,7 @@ module Wazuh
         #   Filters by dhcp.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-network-protocol-info-of-an-agent
         def netproto(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/netproto", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/netproto", options)
         end
 
         # Returns the agent’s OS info.
@@ -141,8 +138,7 @@ module Wazuh
         #   Filters by format.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-packages-info
         def packages(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/packages", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/packages", options)
         end
 
         # Get ports info of an agent
@@ -175,8 +171,7 @@ module Wazuh
         #   Filters by state.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-ports-info-of-an-agent
         def ports(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/ports", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/ports", options)
         end
 
         # Get processes info
@@ -224,8 +219,7 @@ module Wazuh
         # 
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-processes-info
         def processes(agent_id, options = {})
-          data = get "/syscollector/#{agent_id}/processes", options
-          data.items
+          offset_request('get', "/syscollector/#{agent_id}/processes", options)
         end
       end
     end

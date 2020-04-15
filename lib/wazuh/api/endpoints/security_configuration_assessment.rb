@@ -39,8 +39,7 @@ module Wazuh
         #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-security-configuration-assessment-sca-checks-database
         def checks_sca_database(agent_id, policy_id, options = {})
-          data = get "/sca/#{agent_id}/checks/#{policy_id}", options
-          data.items
+          offset_request('get', "/sca/#{agent_id}/checks/#{policy_id}", options)
         end
 
         # Get security configuration assessment (SCA) database
@@ -66,8 +65,7 @@ module Wazuh
         #   Query to filter results by. This is specially useful to filter by total checks passed, failed or total score (fields pass, fail, score).
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-security-configuration-assessment-sca-database
         def sca_database(agent_id, options = {})
-          data = get "/sca/#{agent_id}", options
-          data.items
+          offset_request('get', "/sca/#{agent_id}", options)
         end
       end
     end

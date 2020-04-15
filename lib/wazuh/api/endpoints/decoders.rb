@@ -23,8 +23,7 @@ module Wazuh
         #   Allowed values: enabled, disabled, all
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-decoders
         def all_decoders(options = {})
-          data = get '/decoders', options
-          data.items
+          offset_request("get", "/decoders", options)
         end
 
         # Get all decoders files
@@ -50,8 +49,7 @@ module Wazuh
         #   Name of the decoder file to download.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-decoders-files
         def all_decoders_files(options = {})
-          data = get '/decoders/files', options
-          data.items
+          offset_request('get', '/decoders/files', options)
         end
 
         # Get all parent decoders
@@ -67,8 +65,7 @@ module Wazuh
         #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-all-parent-decoders
         def all_parent_decoders(options = {})
-          data = get '/decoders/parents', options
-          data.items
+          offset_request('get', '/decoders/parents', options)
         end
 
         # Get decoders by name
@@ -86,8 +83,7 @@ module Wazuh
         #   Looks for elements with the specified string.
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-decoders-by-name
         def decoders_by_name(decoder_name, options = {})
-          data = get "/decoders/#{decoder_name}", options
-          data.items
+          offset_request("get", "/decoders/#{decoder_name}", options)
         end
       end
     end
