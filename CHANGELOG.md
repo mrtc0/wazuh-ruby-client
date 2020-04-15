@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.6]
+
 - Support agent upgrade endpoint
   - `/agents/:agent_id/upgrade_custom`
   - `/agents/:agent_id/upgrade`
