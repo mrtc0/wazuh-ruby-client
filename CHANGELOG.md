@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.5]
+
 - Get all items with `offset_request`
   - So far only 500 items(Wazuh API default) have been retrieved that contain a `totalItems` field such as `#all_agents` .
   - For such an endpoint, implemented `offset_request` to fetch all items.
