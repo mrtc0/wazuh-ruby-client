@@ -131,6 +131,36 @@ module Wazuh
           get "/agents/#{agent_id}/upgrade_result", options
         end
 
+        # Upgrade agent using custom file.
+        #
+        # @param [String] :agent_id
+        #   Agent unique ID.
+        # @option options [String] :file_path
+        #   Path to the WPK file. The file must be on a folder on the Wazuh’s installation directory (by default, <code>/var/ossec</code>).
+        # @option options [String] :installer
+        #   Installation script.
+        # @see https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-custom-file
+        def agent_upgrade_custom(agent_id, options = {})
+          put "/agents/#{agent_id}/upgrade_custom", options
+        end
+
+        # Upgrade agent using online repository
+        #
+        # Upgrade the agent using a WPK file from online repository.
+        # @param [String] :agent_id
+        # @option options [String] :wpk_repo
+        #   WPK repository.
+        # @option options [String] :version
+        #   Wazuh version
+        # @option options [Boolean] :use_http
+        #   Use protocol HTTP. If it is false use HTTPS. By default the value is set to false.
+        # @option options [Integer] :force
+        #   Force upgrade. Allow values: 0 or 1.
+        # @see https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-online-repository
+        def agent_upgrade(agent_id, options = {})
+          put "/agents/#{agent_id}/upgrade", options
+        end
+
         # Add a new agent
         #
         # @option options [name] :name

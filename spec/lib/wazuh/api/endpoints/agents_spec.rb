@@ -46,4 +46,18 @@ describe Wazuh::Api::Endpoints::Agents do
       expect(msg).to eq "Restarting all agents"
     end
   end
+
+  describe "#agent_upgrade_custom", vcr: { cassette_name: 'api/endpoints/agent_upgrade_custom' } do
+    it 'Returns message' do
+      msg = client.agent_upgrade_custom("1234")
+      expect(msg).to eq "Installation started"
+    end
+  end
+
+  describe "#agent_upgrade", vcr: { cassette_name: 'api/endpoints/agent_upgrade' } do
+    it 'Returns message' do
+      msg = client.agent_upgrade("1234")
+      expect(msg).to eq "Upgrade procedure started"
+    end
+  end
 end
