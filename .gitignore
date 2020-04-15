@@ -15,6 +15,7 @@ Gemfile.lock
 *.crt
 *.key
 *.ca
+*.bak
 .env
 .bundle
 .DS_Store
