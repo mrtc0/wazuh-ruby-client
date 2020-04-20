@@ -43,15 +43,7 @@ module Wazuh
 
         return response.data.data if response.status == 200
 
-        error_message = ""
-        if response.data.nil?
-          # Error from a not wazuh api
-          error_message = response.body
-        else
-          error_message = response.data.message
-        end
-
-        raise Wazuh::Api::Errors::WazuhError.new(error_message, response)
+        raise Wazuh::Api::Errors::WazuhError.new(response.body, response)
       end
     end
   end
