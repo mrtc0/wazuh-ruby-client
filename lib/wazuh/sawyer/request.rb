@@ -41,9 +41,16 @@ module Wazuh
           connection.call(method, URI::Parser.new.escape(path), data)
         end
 
-        return response.data.data if response.status == 200 || response.data.error == 0
-        
-        error_message = response.data.message
+        return response.data.data if response.status == 200
+
+        error_message = ""
+        if response.data.nil?
+          # Error from a not wazuh api
+          error_message = response.body
+        else
+          error_message = response.data.message
+        end
+
         raise Wazuh::Api::Errors::WazuhError.new(error_message, response)
       end
     end
