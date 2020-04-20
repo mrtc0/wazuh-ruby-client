@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.8]
+
+- fix bug. return with response body.
+
 ## [0.2.7]
 
 - Returns `Wazuh::Api::Errors` when an error is returned from a non wazuh api
