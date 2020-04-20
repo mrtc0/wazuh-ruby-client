@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+- Returns `Wazuh::Api::Errors` when an error is returned from a non wazuh api
+
 ## [0.2.6]
 
 - Support agent upgrade endpoint
