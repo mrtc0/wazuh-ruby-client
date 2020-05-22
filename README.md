@@ -70,6 +70,7 @@ The following global settings are supported via `Wazuh.configure` .
 | verify_ssl | Skip the SSL/TLS verify |
 | logger | loggeer object |
 | endpoint | Wazuh API endpoint URL |
+| ignore_env_proxy | Ignores ENV proxy settings |
 
 
 ### Agents
