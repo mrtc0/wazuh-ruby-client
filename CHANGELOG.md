@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.9]
+
+- Adds availability to ignore env proxy settings [#25](https://github.com/mrtc0/wazuh-ruby-client/pull/25). Thanks @falegk
+- Add the `ca_file` option to Wazuh.Config to specify a CA file [#26](https://github.com/mrtc0/wazuh-ruby-client/pull/26). Thanks @k1LoW
+
 ## [0.2.8]
 
 - fix bug. return with response body.
