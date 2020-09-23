@@ -27,6 +27,7 @@ module Wazuh
         }
 
         opts[:faraday] = ::Faraday.new(options)
+        opts[:faraday].proxy = nil if ignore_env_proxy
 
         ::Sawyer::Agent.new(endpoint, opts)
       end

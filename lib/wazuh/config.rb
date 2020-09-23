@@ -12,6 +12,7 @@ module Wazuh
       verify_ssl
       logger
       endpoint
+      ignore_env_proxy
     ].freeze
 
     attr_accessor(*Config::ATTRIBUTES)
@@ -25,6 +26,7 @@ module Wazuh
       self.basic_password = nil
       self.verify_ssl = true
       self.logger = nil
+      self.ignore_env_proxy = false
     end
   end
 
