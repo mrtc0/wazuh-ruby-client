@@ -14,6 +14,7 @@ module Wazuh
 
         options[:headers]['User-Agent'] = user_agent if user_agent
         options[:ssl].merge!({ client_cert: client_cert, client_key: client_key }) if client_cert || client_key
+        options[:ssl][:ca_file] = ca_file if ca_file
 
         if basic_user || basic_password
           authorization_header = "Basic " + Base64.encode64(basic_user + ':' + basic_password).strip

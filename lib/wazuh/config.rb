@@ -5,6 +5,7 @@ module Wazuh
 
     ATTRIBUTES = %i[
       user_agent
+      ca_file
       client_cert
       client_key
       basic_user
@@ -19,6 +20,7 @@ module Wazuh
     def reset
       self.endpoint = nil
       self.user_agent = "Wazuh Ruby Client/#{Wazuh::VERSION}"
+      self.ca_file = nil
       self.client_cert = nil
       self.client_key = nil
       self.basic_user = nil
