@@ -63,6 +63,7 @@ The following global settings are supported via `Wazuh.configure` .
 | setting | description |
 |:--------|:------------|
 | user_agent | User-Agent |
+| ca_file | CA file (if use Client Certificate Authentication and specify CA file) |
 | client_cert | Client certificate (if use Client Certificate Authentication) |
 | client_key | Client Key (if use Client Certificate Authentication) |
 | basic_user | Basic Authentication user name |
