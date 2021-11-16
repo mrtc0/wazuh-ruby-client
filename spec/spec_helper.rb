@@ -4,6 +4,7 @@ require 'rubygems'
 require 'rspec'
 require 'vcr'
 require 'openssl'
+require 'timecop'
 
 require "wazuh_ruby_client"
 
@@ -26,3 +27,6 @@ VCR.configure do |c|
   c.allow_http_connections_when_no_cassette = false
   c.debug_logger = File.open("log","w")
 end
+
+t = Time.local(2021, 1, 1, 1, 1, 1)
+Timecop.travel(t)

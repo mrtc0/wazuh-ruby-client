@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://wazuh.local:55000/security/user/authenticate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": {
+             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNjM3MDY4NDE4LCJleHAiOjE2MzcwNjkzMTgsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.THajpE8-ilA89M7QFGUuw2NRLRiwqY8eg-oSLqYf4xc"
+          }
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+- request:
+    method: get
+    uri: https://wazuh.local:55000/agents/000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": {
+             "manager": "1cb46c820ff5",
+             "status": "Active",
+             "os": {
+                "arch": "x86_64",
+                "major": "7",
+                "minor": "6",
+                "name": "CentOS Linux",
+                "platform": "centos",
+                "uname": "Linux |1cb46c820ff5 |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
+                "version": "7.6"
+             },
+             "dateAdd": "2019-08-30 08:02:33",
+             "registerIP": "127.0.0.1",
+             "name": "1cb46c820ff5",
+             "ip": "127.0.0.1",
+             "lastKeepAlive": "9999-12-31 23:59:59",
+             "version": "Wazuh v3.10.2",
+             "id": "000",
+             "node_name": "master"
+          }
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+recorded_with: VCR 5.0.0
