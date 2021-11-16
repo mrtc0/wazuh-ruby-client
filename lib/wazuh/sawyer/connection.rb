@@ -2,7 +2,6 @@ module Wazuh
   module Sawyer
     module Connection
       private
-
       def connection
         options = {
           headers: {
@@ -16,21 +15,27 @@ module Wazuh
         options[:ssl].merge!({ client_cert: client_cert, client_key: client_key }) if client_cert || client_key
         options[:ssl][:ca_file] = ca_file if ca_file
 
-        if basic_user || basic_password
-          authorization_header = "Basic " + Base64.encode64(basic_user + ':' + basic_password).strip
-          options[:headers].merge!({'Authorization' => authorization_header})
-        end
-
         options[:ssl].merge!({ verify: false }) unless verify_ssl
 
         opts = {
           :links_parser => ::Sawyer::LinkParsers::Simple.new
         }
 
-        opts[:faraday] = ::Faraday.new(options)
+        case api_version
+        when 3
+          if basic_user || basic_password
+            options[:headers].merge!({'Authorization' => "Basic " + Base64.encode64(basic_user + ':' + basic_password).strip})
+          end
+        when 4
+          raise "user and password is required on v4 api" if !basic_user || !basic_password
+          opts[:faraday] = ::Faraday.new(options) do |conn|
+            conn.request :authorization, 'Bearer', -> { Token.jwt(endpoint, options, basic_user, basic_password) }
+          end
+        end
+
         opts[:faraday].proxy = nil if ignore_env_proxy
 
-        ::Sawyer::Agent.new(endpoint, opts)
+        conn = ::Sawyer::Agent.new(endpoint, opts)
       end
     end
   end

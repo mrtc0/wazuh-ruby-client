@@ -14,6 +14,7 @@ module Wazuh
       logger
       endpoint
       ignore_env_proxy
+      api_version
     ].freeze
 
     attr_accessor(*Config::ATTRIBUTES)
@@ -29,6 +30,7 @@ module Wazuh
       self.verify_ssl = true
       self.logger = nil
       self.ignore_env_proxy = false
+      self.api_version = 3
     end
   end
 

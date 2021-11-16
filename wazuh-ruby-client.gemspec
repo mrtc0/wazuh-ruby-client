@@ -44,4 +44,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'faraday'
   spec.add_dependency 'sawyer'
+  spec.add_dependency 'jwt'
 end
