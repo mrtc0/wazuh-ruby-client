@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://wazuh.local:55000/security/user/authenticate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": {
+             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNjM3MDY4NDE4LCJleHAiOjE2MzcwNjkzMTgsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.THajpE8-ilA89M7QFGUuw2NRLRiwqY8eg-oSLqYf4xc"
+          }
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+- request:
+    method: put
+    uri: https://wazuh.local:55000/agents/upgrade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Wazuh Ruby Client/0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": 0,
+          "data": "Upgrade procedure started"
+        }
+    http_version:
+  recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
+recorded_with: VCR 5.0.0

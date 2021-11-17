@@ -13,6 +13,7 @@ require_relative 'endpoints/security_configuration_assessment'
 require_relative 'endpoints/summary'
 require_relative 'endpoints/syscheck'
 require_relative 'endpoints/syscollector'
+require_relative 'endpoints/v4'
 
 module Wazuh
   module Api
