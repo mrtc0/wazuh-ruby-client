@@ -32,13 +32,13 @@ module Wazuh
 
       private
 
-      def request(method, path, options)
+      def request(method, path, options, query_options={})
         response = case method
         when :get, :delete
           connection.call(method, URI::Parser.new.escape(path), nil, {query: options})
         when :post, :put
           data = options unless options.empty?
-          connection.call(method, URI::Parser.new.escape(path), data)
+          connection.call(method, URI::Parser.new.escape(path), data, {query: query_options})
         end
 
         return response.data.data if response.status == 200

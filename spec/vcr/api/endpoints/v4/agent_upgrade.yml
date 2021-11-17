@@ -31,7 +31,7 @@ http_interactions:
   recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
 - request:
     method: put
-    uri: https://wazuh.local:55000/agents/1234/upgrade
+    uri: https://wazuh.local:55000/agents/upgrade
     body:
       encoding: US-ASCII
       string: ''

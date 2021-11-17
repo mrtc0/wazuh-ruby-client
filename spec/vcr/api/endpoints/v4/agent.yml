@@ -31,7 +31,7 @@ http_interactions:
   recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
 - request:
     method: get
-    uri: https://wazuh.local:55000/agents/000
+    uri: https://wazuh.local:55000/agents?agents_list=000
     body:
       encoding: US-ASCII
       string: ''
