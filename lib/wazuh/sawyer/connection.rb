@@ -24,7 +24,7 @@ module Wazuh
         case api_version
         when 3
           if basic_user || basic_password
-            options[:headers].merge!({'Authorization' => "Basic " + Base64.encode64(basic_user + ':' + basic_password).strip})
+            options[:headers].merge!({'Authorization' => "Basic " + Base64.strict_encode64(basic_user + ':' + basic_password).strip})
           end
         when 4
           raise "user and password is required on v4 api" if !basic_user || !basic_password
