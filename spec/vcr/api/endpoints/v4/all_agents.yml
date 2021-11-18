@@ -53,7 +53,7 @@ http_interactions:
         {
           "error": 0,
           "data": {
-             "items": [
+             "affected_items": [
                 {
                    "registerIP": "any",
                    "name": "myNewAgent",
@@ -146,7 +146,7 @@ http_interactions:
                    "id": "123"
                 }
              ],
-             "totalItems": 10
+             "total_affected_items": 10
           }
         }
     http_version:
@@ -268,7 +268,7 @@ http_interactions:
                    "id": "123"
                 }
              ],
-             "totalItems": 10
+             "total_affected_items": 10
           }
         }
     http_version:
