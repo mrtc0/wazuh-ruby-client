@@ -21,14 +21,17 @@ module Wazuh
       def offset_request(method, path, options = {})
         items = []
         data = send(method, path, options)
-        0.step(data.totalItems, 500) { |offset|
+        total_items = api_version == 3 ? data.totalItems : data.total_affected_items
+        0.step(total_items, 500) { |offset|
           options[:offset] = offset
           d = send(method, path, options)
-          items.concat(d.items)
+          _items = api_version == 3 ? data.items : d.affected_items
+          items.concat(_items)
         }
 
         items
       end
+
 
       private
 
