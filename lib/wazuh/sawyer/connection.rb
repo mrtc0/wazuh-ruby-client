@@ -29,7 +29,7 @@ module Wazuh
         when 4
           raise "user and password is required on v4 api" if !basic_user || !basic_password
           opts[:faraday] = ::Faraday.new(options) do |conn|
-            conn.request :authorization, 'Bearer', -> { Token.jwt(endpoint, options, basic_user, basic_password) }
+            conn.request :authorization, 'Bearer', Token.jwt(endpoint, options, basic_user, basic_password)
           end
         end
 
