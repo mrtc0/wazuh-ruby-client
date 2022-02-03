@@ -6,15 +6,15 @@
 <title>
   Module: Wazuh::Api::Endpoints::Rootcheck
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Wazuh::Api::Endpoints::Rootcheck";
   relpath = '../../../';
 </script>
@@ -76,7 +76,7 @@
   
   <dl>
     <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span></dd>
+    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span>, <span class='object_link'><a href="V4/Rootcheck.html" title="Wazuh::Api::Endpoints::V4::Rootcheck (module)">V4::Rootcheck</a></span></dd>
   </dl>
   
 
@@ -121,8 +121,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Clear rootcheck database of an agent Clears the rootcheck database for a
-specific agent.</p>
+<p>Clear rootcheck database of an agent Clears the rootcheck database for a specific agent.</p>
 </div></span>
   
 </li>
@@ -170,8 +169,7 @@ specific agent.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Get rootcheck CIS requirements Returns the CIS requirements of all
-rootchecks of the specified agent.</p>
+<p>Get rootcheck CIS requirements Returns the CIS requirements of all rootchecks of the specified agent.</p>
 </div></span>
   
 </li>
@@ -243,8 +241,7 @@ rootchecks of the specified agent.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Get rootcheck pci requirements Returns the PCI requirements of all
-rootchecks of the agent.</p>
+<p>Get rootcheck pci requirements Returns the PCI requirements of all rootchecks of the agent.</p>
 </div></span>
   
 </li>
@@ -268,8 +265,7 @@ rootchecks of the agent.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Run rootcheck scan in an agent Runs syscheck and rootcheck on a specified
-agent (Wazuh launches both processes simultaneously).</p>
+<p>Run rootcheck scan in an agent Runs syscheck and rootcheck on a specified agent (Wazuh launches both processes simultaneously).</p>
 </div></span>
   
 </li>
@@ -293,8 +289,7 @@ agent (Wazuh launches both processes simultaneously).</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Run rootcheck scan in all agents Runs syscheck and rootcheck on all agents
-(Wazuh launches both processes simultaneously).</p>
+<p>Run rootcheck scan in all agents Runs syscheck and rootcheck on all agents (Wazuh launches both processes simultaneously).</p>
 </div></span>
   
 </li>
@@ -321,8 +316,7 @@ agent (Wazuh launches both processes simultaneously).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Clear rootcheck database of an agent Clears the rootcheck database for a
-specific agent.</p>
+<p>Clear rootcheck database of an agent Clears the rootcheck database for a specific agent.</p>
 
 
   </div>
@@ -433,8 +427,7 @@ specific agent.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Get rootcheck CIS requirements Returns the CIS requirements of all
-rootchecks of the specified agent.</p>
+<p>Get rootcheck CIS requirements Returns the CIS requirements of all rootchecks of the specified agent.</p>
 
 
   </div>
@@ -537,15 +530,13 @@ rootchecks of the specified agent.</p>
 
 41
 42
-43
-44</pre>
+43</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rootcheck_cis_requirements'>rootcheck_cis_requirements</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/cis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
-  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
+  <span class='id identifier rubyid_offset_request'>offset_request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/cis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -692,17 +683,15 @@ rootchecks of the specified agent.</p>
       <pre class="lines">
 
 
+57
 58
-59
-60
-61</pre>
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rootcheck_database'>rootcheck_database</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
-  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
+  <span class='id identifier rubyid_offset_request'>offset_request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -784,8 +773,7 @@ rootchecks of the specified agent.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Get rootcheck pci requirements Returns the PCI requirements of all
-rootchecks of the agent.</p>
+<p>Get rootcheck pci requirements Returns the PCI requirements of all rootchecks of the agent.</p>
 
 
   </div>
@@ -886,17 +874,15 @@ rootchecks of the agent.</p>
       <pre class="lines">
 
 
-72
-73
-74
-75</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rootcheck_pic_requirements'>rootcheck_pic_requirements</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/pci</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
-  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
+  <span class='id identifier rubyid_offset_request'>offset_request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/pci</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -915,8 +901,7 @@ rootchecks of the agent.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Run rootcheck scan in an agent Runs syscheck and rootcheck on a specified
-agent (Wazuh launches both processes simultaneously)</p>
+<p>Run rootcheck scan in an agent Runs syscheck and rootcheck on a specified agent (Wazuh launches both processes simultaneously)</p>
 
 
   </div>
@@ -952,12 +937,12 @@ agent (Wazuh launches both processes simultaneously)</p>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run_rootcheck'>run_rootcheck</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rootcheck/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -979,8 +964,7 @@ agent (Wazuh launches both processes simultaneously)</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Run rootcheck scan in all agents Runs syscheck and rootcheck on all agents
-(Wazuh launches both processes simultaneously).</p>
+<p>Run rootcheck scan in all agents Runs syscheck and rootcheck on all agents (Wazuh launches both processes simultaneously).</p>
 
 
   </div>
@@ -1001,12 +985,12 @@ agent (Wazuh launches both processes simultaneously)</p>
       <pre class="lines">
 
 
-81
-82
-83</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/rootcheck.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run_rootcheck_all_agents'>run_rootcheck_all_agents</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/rootcheck</span><span class='tstring_end'>&#39;</span></span>
@@ -1021,9 +1005,9 @@ agent (Wazuh launches both processes simultaneously)</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Feb 18 20:12:28 2020 by
+  Generated on Thu Feb  3 21:37:06 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.1).
+  0.9.25 (ruby-2.6.3).
 </div>
 
     </div>

@@ -6,15 +6,15 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "README";
   relpath = '';
 </script>
@@ -57,7 +57,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>Wazuh Ruby Client</h1>
+      <div id="content"><div id='filecontents'><h1 id="wazuh-ruby-client">Wazuh Ruby Client</h1>
 
 <p><a href="https://github.com/mrtc0/wazuh-ruby-client/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 <img src="https://github.com/mrtc0/wazuh-ruby-client/workflows/GitHub%20Workflow/badge.svg" alt="">
@@ -65,28 +65,30 @@
 
 <p>A Ruby client for the wazuh APIs.</p>
 
-<h2>Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <p>Add this line to your application&#39;s Gemfile:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wazuh-ruby-client</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
 
-<h2>Usage</h2>
+<h2 id="usage">Usage</h2>
 
 <pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configure'><span class='object_link'><a href="Wazuh.html#configure-class_method" title="Wazuh.configure (method)">configure</a></span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_config'>config</span><span class='op'>|</span>
   <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://wazuh.local:55000</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_basic_user'>basic_user</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_basic_password'>basic_password</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_verify_ssl'>verify_ssl</span> <span class='op'>=</span> <span class='kw'>false</span>
-<span class='kw'>end</span>
+  <span class='comment'># if you are using the Wazuh version 4
+</span>  <span class='comment'># config.api_version = 4
+</span><span class='kw'>end</span>
 
 <span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Wazuh.html" title="Wazuh (module)">Wazuh</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Wazuh/Client.html" title="Wazuh::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Wazuh/Client.html#initialize-instance_method" title="Wazuh::Client#initialize (method)">new</a></span></span>
 <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_all_agents'>all_agents</span>
 <span class='comment'># =&gt; {&quot;error&quot;=&gt;0, &quot;data&quot;=&gt;{&quot;items&quot;=&gt;[{&quot;os&quot;=&gt;{&quot;arch&quot;=&gt;&quot;x86_64&quot;, &quot;codename&quot;=&gt;&quot;Xenial Xerus&quot;, &quot;major&quot;=&gt;&quot;16&quot;, &quot;minor&quot;=&gt;&quot;04&quot;, &quot;name&quot;=&gt;&quot;Ubuntu&quot;, &quot;platform&quot;=&gt;&quot;ubuntu&quot;, &quot;uname&quot;=&gt;&quot;Linux |wazuh-manager-master-0 |4.14.138+ |#1 SMP Tue Sep 3 02:58:08 PDT 2019 |x86_64&quot;, &quot;version&quot;=&gt;&quot;16.04.6 LTS&quot;}, &quot;status&quot;=&gt;&quot;Active&quot;, &quot;name&quot;=&gt;&quot;wazuh-manager-master-0&quot;, &quot;registerIP&quot;=&gt;&quot;127.0.0.1&quot;, &quot;manager&quot;=&gt;&quot;wazuh-manager-master-0&quot;, &quot;dateAdd&quot;=&gt;&quot;2020-01-07 16:13:05&quot;, &quot;ip&quot;=&gt;&quot;127.0.0.1&quot;, &quot;node_name&quot;=&gt;&quot;wazuh-manager-master&quot;, &quot;version&quot;=&gt;&quot;Wazuh v3.11.1&quot;, &quot;lastKeepAlive&quot;=&gt;&quot;9999-12-31 23:59:59&quot;, &quot;id&quot;=&gt;&quot;000&quot;}], &quot;totalItems&quot;=&gt;1}}
 </span></code></pre>
 
-<h3>Authorization</h3>
+<h3 id="authorization">Authorization</h3>
 
 <p>Set <code>basic_user</code> and <code>basic_password</code> for basic authentication.<br>
 If you using self-signed certificate, <code>verify_ssl</code> must be set to <code>false</code> .</p>
@@ -110,7 +112,7 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <span class='kw'>end</span>
 </code></pre>
 
-<h3>Global Settings</h3>
+<h3 id="global-settings">Global Settings</h3>
 
 <p>The following global settings are supported via <code>Wazuh.configure</code> .</p>
 
@@ -123,6 +125,10 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <tr>
 <td style="text-align: left">user_agent</td>
 <td style="text-align: left">User-Agent</td>
+</tr>
+<tr>
+<td style="text-align: left">ca_file</td>
+<td style="text-align: left">CA file (if use Client Certificate Authentication and specify CA file)</td>
 </tr>
 <tr>
 <td style="text-align: left">client_cert</td>
@@ -152,9 +158,17 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <td style="text-align: left">endpoint</td>
 <td style="text-align: left">Wazuh API endpoint URL</td>
 </tr>
+<tr>
+<td style="text-align: left">ignore_env_proxy</td>
+<td style="text-align: left">Ignores ENV proxy settings</td>
+</tr>
+<tr>
+<td style="text-align: left">api_version</td>
+<td style="text-align: left">Wazuh API Version (3 or 4)</td>
+</tr>
 </tbody></table>
 
-<h3>Agents</h3>
+<h3 id="agents">Agents</h3>
 
 <p>Get all agents list.</p>
 
@@ -200,7 +214,7 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 &gt; client.all_agents({ &#39;os.name&#39; =&gt; &#39;ubuntu&#39; })
 </code></pre>
 
-<h3>Syscollector</h3>
+<h3 id="syscollector">Syscollector</h3>
 
 <p>List agent&#39;s packages.</p>
 
@@ -227,9 +241,10 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
  ...
 </code></pre>
 
-<h3>Other</h3>
+<h3 id="other">Other</h3>
 
-<p>wazuh-ruby-client is support to all Wazuh API.  </p>
+<p>wazuh-ruby-client is supports some of the Wazuh API.<br>
+The v4 API is not yet supported.</p>
 
 <ul>
 <li>[x] Active Response</li>
@@ -239,14 +254,20 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <li>[x] Cluster</li>
 <li>[x] Decoders</li>
 <li>[x] Experimental</li>
+<li>[ ] Groups</li>
 <li>[x] Lists</li>
+<li>[ ] Logtest</li>
+<li>[ ] Mitre</li>
 <li>[x] Manager</li>
 <li>[x] Rootcheck</li>
 <li>[x] Rules</li>
+<li>[ ] Security</li>
 <li>[x] Security Configuration Assessment</li>
 <li>[x] Summary</li>
 <li>[x] Syscheck</li>
 <li>[x] Syscollector</li>
+<li>[ ] Tasks</li>
+<li>[x] Vulnerability</li>
 </ul>
 
 <p>Refer to the document of wazuh-ruby-client and Wazuh API Reference for the list of all available methods.</p>
@@ -256,11 +277,11 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 <li><a href="https://documentation.wazuh.com/3.10/user-manual/api/reference.html">https://documentation.wazuh.com/3.10/user-manual/api/reference.html</a></li>
 </ul>
 
-<h2>Contributing</h2>
+<h2 id="contributing">Contributing</h2>
 
 <p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/mrtc0/wazuh-ruby-client">https://github.com/mrtc0/wazuh-ruby-client</a>.</p>
 
-<h2>Copyright and License</h2>
+<h2 id="copyright-and-license">Copyright and License</h2>
 
 <p>Copyright (c) 2015-2019, <a href="https://blog.ssrf.in">Kohei Morita</a></p>
 
@@ -268,9 +289,9 @@ If you using self-signed certificate, <code>verify_ssl</code> must be set to <co
 </div></div>
 
       <div id="footer">
-  Generated on Tue Feb 18 20:12:27 2020 by
+  Generated on Thu Feb  3 21:37:05 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.1).
+  0.9.25 (ruby-2.6.3).
 </div>
 
     </div>

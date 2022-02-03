@@ -6,15 +6,15 @@
 <title>
   Module: Wazuh::Api::Endpoints::Agents
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Wazuh::Api::Endpoints::Agents";
   relpath = '../../../';
 </script>
@@ -76,7 +76,7 @@
   
   <dl>
     <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span></dd>
+    <dd><span class='object_link'><a href="../Endpoints.html" title="Wazuh::Api::Endpoints (module)">Wazuh::Api::Endpoints</a></span>, <span class='object_link'><a href="V4/Agents.html" title="Wazuh::Api::Endpoints::V4::Agents (module)">V4::Agents</a></span></dd>
   </dl>
   
 
@@ -193,8 +193,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Add a list of agents to a group Adds a list of agents to the specified
-group.</p>
+<p>Add a list of agents to a group Adds a list of agents to the specified group.</p>
 </div></span>
   
 </li>
@@ -371,6 +370,54 @@ group.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#agent_upgrade-instance_method" title="#agent_upgrade (instance method)">#<strong>agent_upgrade</strong>(agent_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Upgrade agent using online repository.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#agent_upgrade_custom-instance_method" title="#agent_upgrade_custom (instance method)">#<strong>agent_upgrade_custom</strong>(agent_id, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Upgrade agent using custom file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#agents_by_group-instance_method" title="#agents_by_group (instance method)">#<strong>agents_by_group</strong>(group_id, options = {})  &#x21d2; Object </a>
     
 
@@ -410,8 +457,7 @@ group.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Get agents without group Returns a list with the available agents without
-group.</p>
+<p>Get agents without group Returns a list with the available agents without group.</p>
 </div></span>
   
 </li>
@@ -531,8 +577,7 @@ group.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Delete agents Removes agents, using a list of them or a criterion based on
-the status or time of the last connection.</p>
+<p>Delete agents Removes agents, using a list of them or a criterion based on the status or time of the last connection.</p>
 </div></span>
   
 </li>
@@ -556,8 +601,7 @@ the status or time of the last connection.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns all the different combinations that agents have for the selected
-fields.</p>
+<p>Returns all the different combinations that agents have for the selected fields.</p>
 </div></span>
   
 </li>
@@ -581,8 +625,7 @@ fields.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Get a file in group Returns the specified file belonging to the group
-parsed to JSON.</p>
+<p>Get a file in group Returns the specified file belonging to the group parsed to JSON.</p>
 </div></span>
   
 </li>
@@ -726,8 +769,7 @@ parsed to JSON.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Remove a single group of an agent Remove the group of the agent but will
-leave the rest of its group if it belongs to a multigroup.</p>
+<p>Remove a single group of an agent Remove the group of the agent but will leave the rest of its group if it belongs to a multigroup.</p>
 </div></span>
   
 </li>
@@ -751,8 +793,7 @@ leave the rest of its group if it belongs to a multigroup.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Remove a single group of multiple agents Remove a list of agents of a
-group.</p>
+<p>Remove a single group of multiple agents Remove a list of agents of a group.</p>
 </div></span>
   
 </li>
@@ -896,8 +937,7 @@ group.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Put configuration file (agent.conf) into a group Upload the group
-configuration (agent.conf).</p>
+<p>Put configuration file (agent.conf) into a group Upload the group configuration (agent.conf).</p>
 </div></span>
   
 </li>
@@ -1004,9 +1044,7 @@ configuration (agent.conf).</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>IP to agent If this is not included, the API will get the IP automatically.
-If you are behind a proxy, you must set the option config.BehindProxyServer
-to yes at config.js. Allowed values: IP, IP/NET, ANY</p>
+<p>IP to agent If this is not included, the API will get the IP automatically. If you are behind a proxy, you must set the option config.BehindProxyServer to yes at config.js. Allowed values: IP, IP/NET, ANY</p>
 </div>
           
         </li>
@@ -1019,8 +1057,7 @@ to yes at config.js. Allowed values: IP, IP/NET, ANY</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Remove the old agent with the same IP if disconnected since &lt;force&gt;
-seconds.</p>
+<p>Remove the old agent with the same IP if disconnected since &lt;force&gt; seconds.</p>
 </div>
           
         </li>
@@ -1042,12 +1079,12 @@ seconds.</p>
       <pre class="lines">
 
 
-147
-148
-149</pre>
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_agent'>add_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1110,12 +1147,12 @@ seconds.</p>
       <pre class="lines">
 
 
-181
-182
-183</pre>
+210
+211
+212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 210</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_agent_quick'>add_agent_quick</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1238,12 +1275,12 @@ seconds.</p>
       <pre class="lines">
 
 
-251
-252
-253</pre>
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 280</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_agent_to_group'>add_agent_to_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1265,8 +1302,7 @@ seconds.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Add a list of agents to a group Adds a list of agents to the specified
-group</p>
+<p>Add a list of agents to a group Adds a list of agents to the specified group</p>
 
 
   </div>
@@ -1318,12 +1354,12 @@ group</p>
       <pre class="lines">
 
 
-237
-238
-239</pre>
+266
+267
+268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 237</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 266</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_agents_to_group'>add_agents_to_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
@@ -1446,12 +1482,12 @@ group</p>
       <pre class="lines">
 
 
+37
 38
-39
-40</pre>
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent'>agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1574,12 +1610,12 @@ group</p>
       <pre class="lines">
 
 
+49
 50
-51
-52</pre>
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_by_name'>agent_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/name/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_name'>agent_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -1669,12 +1705,12 @@ group</p>
       <pre class="lines">
 
 
-209
-210
-211</pre>
+238
+239
+240</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 209</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 238</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_config'>agent_config</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_component'>component</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/config/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_component'>component</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_configuration'>configuration</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1755,12 +1791,12 @@ group</p>
       <pre class="lines">
 
 
+60
 61
-62
-63</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_key'>agent_key</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/key</span><span class='tstring_end'>&quot;</span></span>
@@ -1879,12 +1915,12 @@ group</p>
       <pre class="lines">
 
 
-407
-408
-409</pre>
+436
+437
+438</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 407</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 436</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_os_summary'>agent_os_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/summary/os</span><span class='tstring_end'>&quot;</span></span>
@@ -1927,12 +1963,12 @@ group</p>
       <pre class="lines">
 
 
-415
-416
-417</pre>
+444
+445
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 415</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 444</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_summary'>agent_summary</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/summary</span><span class='tstring_end'>&quot;</span></span>
@@ -1995,15 +2031,284 @@ group</p>
       <pre class="lines">
 
 
-226
-227
-228</pre>
+255
+256
+257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 226</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 255</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agent_sync_status'>agent_sync_status</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agent/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/is_sync</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agent_upgrade-instance_method">
+  
+    #<strong>agent_upgrade</strong>(agent_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Upgrade agent using online repository</p>
+
+<p>Upgrade the agent using a WPK file from online repository.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>:agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:wpk_repo</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>WPK repository.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:version</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Wazuh version</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:use_http</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Use protocol HTTP. If it is false use HTTPS. By default the value is set to false.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:force</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Force upgrade. Allow values: 0 or 1.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-online-repository" target="_parent" title="https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-online-repository">https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-online-repository</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_upgrade'>agent_upgrade</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/upgrade</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="agent_upgrade_custom-instance_method">
+  
+    #<strong>agent_upgrade_custom</strong>(agent_id, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Upgrade agent using custom file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>:agent_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Agent unique ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:file_path</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Path to the WPK file. The file must be on a folder on the Wazuh’s installation directory (by default, <code>/var/ossec</code>).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:installer</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Installation script.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-custom-file" target="_parent" title="https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-custom-file">https://documentation.wazuh.com/3.12/user-manual/api/reference.html#upgrade-agent-using-custom-file</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_agent_upgrade_custom'>agent_upgrade_custom</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/upgrade_custom</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2155,15 +2460,15 @@ group</p>
       <pre class="lines">
 
 
-292
-293
-294</pre>
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 321</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agents_by_group'>agents_by_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='id identifier rubyid_offset_request'>offset_request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2182,8 +2487,7 @@ group</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Get agents without group Returns a list with the available agents without
-group.</p>
+<p>Get agents without group Returns a list with the available agents without group.</p>
 
 
   </div>
@@ -2298,12 +2602,12 @@ group.</p>
       <pre class="lines">
 
 
-307
-308
-309</pre>
+336
+337
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_agents_by_no_group'>agents_by_no_group</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>agents/no_group</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -2407,8 +2711,7 @@ group.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Sorts the collection by a field or fields (separated by comma). Use +/- at
-the beginning to list in ascending or descending order.</p>
+<p>Sorts the collection by a field or fields (separated by comma). Use +/- at the beginning to list in ascending or descending order.</p>
 </div>
           
         </li>
@@ -2434,8 +2737,7 @@ the beginning to list in ascending or descending order.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filters by agent status. Use commas to enter multiple statuses. Allowed
-values: active, pending, neverconnected, disconnected</p>
+<p>Filters by agent status. Use commas to enter multiple statuses. Allowed values: active, pending, neverconnected, disconnected</p>
 </div>
           
         </li>
@@ -2448,9 +2750,7 @@ values: active, pending, neverconnected, disconnected</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filters out disconnected agents for longer than specified. Time in seconds,
-‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never
-connected agents, uses the register date.</p>
+<p>Filters out disconnected agents for longer than specified. Time in seconds, ‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never connected agents, uses the register date.</p>
 </div>
           
         </li>
@@ -2492,15 +2792,13 @@ connected agents, uses the register date.</p>
 
 25
 26
-27
-28</pre>
+27</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_agents'>all_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
-  <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_items'>items</span>
+  <span class='id identifier rubyid_offset_request'>offset_request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2560,12 +2858,12 @@ connected agents, uses the register date.</p>
       <pre class="lines">
 
 
-261
-262
-263</pre>
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 290</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_group'>create_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -2643,8 +2941,7 @@ connected agents, uses the register date.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Delete an agent from the key store. This parameter is only valid if purge
-is set to no in the manager’s ossec.conf.</p>
+<p>Delete an agent from the key store. This parameter is only valid if purge is set to no in the manager’s ossec.conf.</p>
 </div>
           
         </li>
@@ -2666,12 +2963,12 @@ is set to no in the manager’s ossec.conf.</p>
       <pre class="lines">
 
 
-158
-159
-160</pre>
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_agent'>delete_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -2729,12 +3026,12 @@ is set to no in the manager’s ossec.conf.</p>
       <pre class="lines">
 
 
-216
-217
-218</pre>
+245
+246
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_agent_by_group'>delete_agent_by_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/groups</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
@@ -2756,8 +3053,7 @@ is set to no in the manager’s ossec.conf.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Delete agents Removes agents, using a list of them or a criterion based on
-the status or time of the last connection.</p>
+<p>Delete agents Removes agents, using a list of them or a criterion based on the status or time of the last connection.</p>
 
 
   </div>
@@ -2813,8 +3109,7 @@ the status or time of the last connection.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Delete an agent from the key store. This parameter is only valid if purge
-is set to no in the manager’s ossec.conf.</p>
+<p>Delete an agent from the key store. This parameter is only valid if purge is set to no in the manager’s ossec.conf.</p>
 </div>
           
         </li>
@@ -2827,8 +3122,7 @@ is set to no in the manager’s ossec.conf.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filters by agent status. Use commas to enter multiple statuses. Allowed
-values: active, pending, neverconnected, disconnected</p>
+<p>Filters by agent status. Use commas to enter multiple statuses. Allowed values: active, pending, neverconnected, disconnected</p>
 </div>
           
         </li>
@@ -2841,9 +3135,7 @@ values: active, pending, neverconnected, disconnected</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filters out disconnected agents for longer than specified. Time in seconds,
-‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never
-connected agents, uses the register date. Default value: 7d.</p>
+<p>Filters out disconnected agents for longer than specified. Time in seconds, ‘[n_days]d’, ‘[n_hours]h’, ‘[n_minutes]m’ or ‘[n_seconds]s’. For never connected agents, uses the register date. Default value: 7d.</p>
 </div>
           
         </li>
@@ -2858,12 +3150,12 @@ connected agents, uses the register date. Default value: 7d.</p>
       <pre class="lines">
 
 
-172
-173
-174</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_agents'>delete_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -2885,9 +3177,7 @@ connected agents, uses the register date. Default value: 7d.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns all the different combinations that agents have for the selected
-fields. It also indicates the total number of agents that have each
-combination.</p>
+<p>Returns all the different combinations that agents have for the selected fields. It also indicates the total number of agents that have each combination.</p>
 
 
   </div>
@@ -2956,8 +3246,7 @@ combination.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Sorts the collection by a field or fields (separated by comma). Use +/- at
-the beginning to list in ascending or descending order.</p>
+<p>Sorts the collection by a field or fields (separated by comma). Use +/- at the beginning to list in ascending or descending order.</p>
 </div>
           
         </li>
@@ -3031,12 +3320,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
+105
 106
-107
-108</pre>
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_distinct_fields_in_agents'>distinct_fields_in_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/stats/distinct</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3058,8 +3347,7 @@ the beginning to list in ascending or descending order.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Get a file in group Returns the specified file belonging to the group
-parsed to JSON.</p>
+<p>Get a file in group Returns the specified file belonging to the group parsed to JSON.</p>
 
 
   </div>
@@ -3165,12 +3453,12 @@ parsed to JSON.</p>
       <pre class="lines">
 
 
-275
-276
-277</pre>
+304
+305
+306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_file_in_group'>get_file_in_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/files/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filename'>filename</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3275,12 +3563,12 @@ parsed to JSON.</p>
       <pre class="lines">
 
 
-317
-318
-319</pre>
+346
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 317</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group_configuration'>group_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/configuration</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3412,12 +3700,12 @@ parsed to JSON.</p>
       <pre class="lines">
 
 
-331
-332
-333</pre>
+360
+361
+362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 331</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 360</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_group_files'>group_files</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/files</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3538,12 +3826,12 @@ parsed to JSON.</p>
       <pre class="lines">
 
 
-344
-345
-346</pre>
+373
+374
+375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 373</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_groups'>groups</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/groups</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3621,9 +3909,7 @@ parsed to JSON.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>If this is not included, the API will get the IP automatically. If you are
-behind a proxy, you must set the option config.BehindProxyServer to yes at
-config.js. Allowed values: IP, IP/NET, ANY</p>
+<p>If this is not included, the API will get the IP automatically. If you are behind a proxy, you must set the option config.BehindProxyServer to yes at config.js. Allowed values: IP, IP/NET, ANY</p>
 </div>
           
         </li>
@@ -3662,8 +3948,7 @@ config.js. Allowed values: IP, IP/NET, ANY</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Remove the old agent the with same IP if disconnected since &lt;force&gt;
-seconds.</p>
+<p>Remove the old agent the with same IP if disconnected since &lt;force&gt; seconds.</p>
 </div>
           
         </li>
@@ -3678,12 +3963,12 @@ seconds.</p>
       <pre class="lines">
 
 
-198
-199
-200</pre>
+227
+228
+229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insert_agent'>insert_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/insert</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3774,8 +4059,7 @@ seconds.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Sorts the collection by a field or fields (separated by comma). Use +/- at
-the beginning to list in ascending or descending order.</p>
+<p>Sorts the collection by a field or fields (separated by comma). Use +/- at the beginning to list in ascending or descending order.</p>
 </div>
           
         </li>
@@ -3810,12 +4094,12 @@ the beginning to list in ascending or descending order.</p>
       <pre class="lines">
 
 
+120
 121
-122
-123</pre>
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_outdated_agents'>outdated_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/outdated</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -3837,8 +4121,7 @@ the beginning to list in ascending or descending order.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Remove a single group of an agent Remove the group of the agent but will
-leave the rest of its group if it belongs to a multigroup.</p>
+<p>Remove a single group of an agent Remove the group of the agent but will leave the rest of its group if it belongs to a multigroup.</p>
 
 
   </div>
@@ -3885,12 +4168,12 @@ leave the rest of its group if it belongs to a multigroup.</p>
       <pre class="lines">
 
 
-366
-367
-368</pre>
+395
+396
+397</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 366</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 395</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_agent_of_group'>remove_agent_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -3912,8 +4195,7 @@ leave the rest of its group if it belongs to a multigroup.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Remove a single group of multiple agents Remove a list of agents of a
-group.</p>
+<p>Remove a single group of multiple agents Remove a list of agents of a group.</p>
 
 
   </div>
@@ -3960,12 +4242,12 @@ group.</p>
       <pre class="lines">
 
 
-376
-377
-378</pre>
+405
+406
+407</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 376</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 405</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_agents_of_group'>remove_agents_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_groups'>groups</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/group/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='label'>ids:</span> <span class='id identifier rubyid_ids'>ids</span><span class='rbrace'>}</span>
@@ -3987,8 +4269,7 @@ group.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Remove all agent groups. Removes the group of the agent. The agent will
-automatically revert to the ‘default’ group.</p>
+<p>Remove all agent groups. Removes the group of the agent. The agent will automatically revert to the ‘default’ group.</p>
 
 
   </div>
@@ -4024,12 +4305,12 @@ automatically revert to the ‘default’ group.</p>
       <pre class="lines">
 
 
-385
-386
-387</pre>
+414
+415
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 414</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_all_agent_of_group'>remove_all_agent_of_group</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/group</span><span class='tstring_end'>&quot;</span></span>
@@ -4051,8 +4332,7 @@ automatically revert to the ‘default’ group.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Remove group Removes the group. Agents that were assigned to the removed
-group will automatically revert to the ‘default’ group.</p>
+<p>Remove group Removes the group. Agents that were assigned to the removed group will automatically revert to the ‘default’ group.</p>
 
 
   </div>
@@ -4088,12 +4368,12 @@ group will automatically revert to the ‘default’ group.</p>
       <pre class="lines">
 
 
-394
-395
-396</pre>
+423
+424
+425</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 394</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 423</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_group'>remove_group</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/groups/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_group_id'>group_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -4180,12 +4460,12 @@ group will automatically revert to the ‘default’ group.</p>
       <pre class="lines">
 
 
+69
 70
-71
-72</pre>
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_agents'>restart_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/restart</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -4221,12 +4501,12 @@ group will automatically revert to the ‘default’ group.</p>
       <pre class="lines">
 
 
+75
 76
-77
-78</pre>
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_all_agents'>restart_all_agents</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/agents/restart</span><span class='tstring_end'>&#39;</span></span>
@@ -4289,12 +4569,12 @@ group will automatically revert to the ‘default’ group.</p>
       <pre class="lines">
 
 
+84
 85
-86
-87</pre>
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart_an_agents'>restart_an_agents</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_put'>put</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/restart</span><span class='tstring_end'>&quot;</span></span>
@@ -4316,8 +4596,7 @@ group will automatically revert to the ‘default’ group.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Put configuration file (agent.conf) into a group Upload the group
-configuration (agent.conf).</p>
+<p>Put configuration file (agent.conf) into a group Upload the group configuration (agent.conf).</p>
 
 
   </div>
@@ -4364,14 +4643,14 @@ configuration (agent.conf).</p>
       <pre class="lines">
 
 
-354
-355
-356
-357
-358</pre>
+383
+384
+385
+386
+387</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 354</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update_group_ossec_configuration'>update_group_ossec_configuration</span><span class='lparen'>(</span><span class='id identifier rubyid_group_id'>group_id</span><span class='comma'>,</span> <span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
   <span class='comment'># post &quot;/agents/groups/#{group_id}/configuration&quot;
@@ -4471,12 +4750,12 @@ configuration (agent.conf).</p>
       <pre class="lines">
 
 
+130
 131
-132
-133</pre>
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/wazuh/api/endpoints/agents.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_upgrade_result_from_agent'>upgrade_result_from_agent</span><span class='lparen'>(</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/agents/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_id'>agent_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/upgrade_result</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span>
@@ -4491,9 +4770,9 @@ configuration (agent.conf).</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Feb 18 20:12:28 2020 by
+  Generated on Thu Feb  3 21:37:06 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.1).
+  0.9.25 (ruby-2.6.3).
 </div>
 
     </div>
