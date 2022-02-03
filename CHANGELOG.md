@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.4]
+
+Support Vulnerability API.
+
+- [Support Vulnerability API by mrtc0 · Pull Request #33 · mrtc0/wazuh-ruby-client](https://github.com/mrtc0/wazuh-ruby-client/pull/33)
+
+## [0.3.3]
+
+
+## [0.3.2]
+
+Bug fix.
+
+- [Couldn't support proc object in old faraday · mrtc0/wazuh-ruby-client@d601b09](https://github.com/mrtc0/wazuh-ruby-client/commit/d601b090bfa9a74d3fb24d0534ce9f4ac5f454f6)
+
+## [0.3.1]
+
+Bug fix.
+
+- [Base64.encode is included return code #30](https://github.com/mrtc0/wazuh-ruby-client/pull/30)
+
+## [0.3.0]
+
+- Support some v4 API (Thanks @pyama86)
+
 ## [0.2.9]
 
 - Adds availability to ignore env proxy settings [#25](https://github.com/mrtc0/wazuh-ruby-client/pull/25). Thanks @falegk

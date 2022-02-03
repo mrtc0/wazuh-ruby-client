@@ -154,6 +154,13 @@ List agents' processes.
  ...
 ```
 
+### Vulnerability
+
+```ruby
+> client.vulnerabilities('000')
+=> [{:architecture=>"amd64", :cve=>"CVE-2016-4802", :name=>"curl", :version=>"7.47.0-1ubuntu2.14"}, {:architecture=>"amd64", :cve=>"CVE-2016-8620", :name=>"curl", :version=>"7.47.0-1ubun...
+```
+
 ### Other
 
 wazuh-ruby-client is supports some of the Wazuh API.  
