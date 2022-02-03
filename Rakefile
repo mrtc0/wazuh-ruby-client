@@ -4,3 +4,7 @@ require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
+
+task :doc do
+  sh %{yardoc 'lib/**/*.rb' --output docs}
+end
