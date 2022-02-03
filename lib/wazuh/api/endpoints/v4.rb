@@ -13,7 +13,7 @@ require_relative 'v4/security_configuration_assessment'
 require_relative 'v4/summary'
 require_relative 'v4/syscheck'
 require_relative 'v4/syscollector'
-
+require_relative 'v4/vulnerabilities'
 
 module Wazuh
   module Api
@@ -34,6 +34,7 @@ module Wazuh
         include Syscheck
         include Syscollector
         include SecurityConfigurationAssessment
+        include Vulnerabilities
       end
     end
   end
