@@ -23,6 +23,8 @@ Wazuh.configure do |config|
   config.basic_user = "foo"
   config.basic_password = "bar"
   config.verify_ssl = false
+  # if you are using the Wazuh version 4
+  # config.api_version = 4
 end
 
 client = Wazuh::Client.new
@@ -72,6 +74,7 @@ The following global settings are supported via `Wazuh.configure` .
 | logger | loggeer object |
 | endpoint | Wazuh API endpoint URL |
 | ignore_env_proxy | Ignores ENV proxy settings |
+| api_version | Wazuh API Version (3 or 4) |
 
 
 ### Agents
@@ -153,7 +156,8 @@ List agents' processes.
 
 ### Other
 
-wazuh-ruby-client is support to all Wazuh API.  
+wazuh-ruby-client is supports some of the Wazuh API.  
+The v4 API is not yet supported.
 
 - [x] Active Response
 - [x] Agents
@@ -162,14 +166,20 @@ wazuh-ruby-client is support to all Wazuh API.
 - [x] Cluster
 - [x] Decoders
 - [x] Experimental
+- [ ] Groups
 - [x] Lists
+- [ ] Logtest
+- [ ] Mitre
 - [x] Manager
 - [x] Rootcheck
 - [x] Rules
+- [ ] Security
 - [x] Security Configuration Assessment
 - [x] Summary
 - [x] Syscheck
 - [x] Syscollector
+- [ ] Tasks
+- [x] Vulnerability
 
 Refer to the document of wazuh-ruby-client and Wazuh API Reference for the list of all available methods.
 
