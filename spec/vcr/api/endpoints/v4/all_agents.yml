@@ -173,103 +173,97 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "error": 0,
           "data": {
-             "items": [
-                {
-                   "registerIP": "any",
-                   "name": "myNewAgent",
-                   "status": "Never connected",
-                   "dateAdd": "2019-08-30 09:31:02",
-                   "node_name": "unknown",
-                   "ip": "any",
-                   "id": "010"
+            "affected_items": [
+              {
+                "configSum": "29e0926e5a77442212e824868a2a61df",
+                "dateAdd": "1970-01-01T00:00:00Z",
+                "group": [
+                  "default",
+                  "group1"
+                ],
+                "id": "001",
+                "ip": "172.18.0.6",
+                "lastKeepAlive": "2019-10-16T09:13:34Z",
+                "manager": "wazuh-worker2",
+                "mergedSum": "a13d9b2edc5bdd5ef7331c0d5b9ecf34",
+                "name": "wazuh-agent1",
+                "node_name": "worker2",
+                "os": {
+                  "arch": "x86_64",
+                  "codename": "Xenial Xerus",
+                  "major": "16",
+                  "minor": "04",
+                  "name": "Ubuntu",
+                  "platform": "ubuntu",
+                  "uname": "Linux |wazuh-agent1 |4.18.0-16-generic |#17~18.04.1-Ubuntu SMP Tue Feb 12 13:35:51 UTC 2019 |x86_64",
+                  "version": "16.04.6 LTS"
                 },
-                {
-                   "os": {
-                      "arch": "x86_64",
-                      "major": "7",
-                      "minor": "6",
-                      "name": "CentOS Linux",
-                      "platform": "centos",
-                      "uname": "Linux |7084a5343d0a |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
-                      "version": "7.6"
-                   },
-                   "registerIP": "172.22.0.6",
-                   "name": "7084a5343d0a",
-                   "mergedSum": "6c2a4b148047e590188f8befe47c2bff",
-                   "status": "Active",
-                   "group": [
-                      "default"
-                   ],
-                   "dateAdd": "2019-08-30 09:18:12",
-                   "configSum": "ab73af41699f13fdd81903b5f23d8d00",
-                   "lastKeepAlive": "2019-08-30 09:31:04",
-                   "node_name": "worker-1",
-                   "ip": "172.22.0.6",
-                   "id": "002",
-                   "version": "Wazuh v3.10.2",
-                   "manager": "7995615e03c0"
+                "registerIP": "any",
+                "status": "active",
+                "version": "Wazuh v3.10.0"
+              },
+              {
+                "configSum": "e2f47d482da37c099fa1d6e4c43b523c",
+                "dateAdd": "1970-01-01T00:00:00Z",
+                "group": [
+                  "default",
+                  "group2"
+                ],
+                "id": "002",
+                "ip": "172.18.0.7",
+                "lastKeepAlive": "2019-10-16T09:13:28Z",
+                "manager": "wazuh-worker2",
+                "mergedSum": "d6fde33dc232d8f91359b2e98994c933",
+                "name": "wazuh-agent2",
+                "node_name": "worker2",
+                "os": {
+                  "arch": "x86_64",
+                  "codename": "Xenial Xerus",
+                  "major": "16",
+                  "minor": "04",
+                  "name": "Ubuntu",
+                  "platform": "ubuntu",
+                  "uname": "Linux |wazuh-agent2 |4.18.0-16-generic |#17~18.04.1-Ubuntu SMP Tue Feb 12 13:35:51 UTC 2019 |x86_64",
+                  "version": "16.04.6 LTS"
                 },
-                {
-                   "os": {
-                      "arch": "x86_64",
-                      "major": "7",
-                      "minor": "6",
-                      "name": "CentOS Linux",
-                      "platform": "centos",
-                      "uname": "Linux |1b0e9cb1ec2a |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
-                      "version": "7.6"
-                   },
-                   "registerIP": "172.22.0.3",
-                   "name": "1b0e9cb1ec2a",
-                   "mergedSum": "6c2a4b148047e590188f8befe47c2bff",
-                   "status": "Active",
-                   "group": [
-                      "default"
-                   ],
-                   "dateAdd": "1970-01-01 00:00:00",
-                   "configSum": "ab73af41699f13fdd81903b5f23d8d00",
-                   "lastKeepAlive": "2019-08-30 09:31:03",
-                   "node_name": "master",
-                   "ip": "172.22.0.3",
-                   "id": "001",
-                   "version": "Wazuh v3.10.2",
-                   "manager": "1cb46c820ff5"
+                "registerIP": "any",
+                "status": "active",
+                "version": "Wazuh v3.10.0"
+              },
+              {
+                "configSum": "dadc074e9a4f036c5d905c280c3b5bcc",
+                "dateAdd": "1970-01-01T00:00:00Z",
+                "group": [
+                  "default",
+                  "group3"
+                ],
+                "id": "003",
+                "ip": "172.18.0.8",
+                "lastKeepAlive": "2019-10-16T09:13:29Z",
+                "manager": "wazuh-master",
+                "mergedSum": "e40515ffa928c72ee167ed41d88245c4",
+                "name": "wazuh-agent3",
+                "node_name": "master-node",
+                "os": {
+                  "arch": "x86_64",
+                  "codename": "Xenial Xerus",
+                  "major": "16",
+                  "minor": "04",
+                  "name": "Ubuntu",
+                  "platform": "ubuntu",
+                  "uname": "Linux |wazuh-agent3 |4.18.0-16-generic |#17~18.04.1-Ubuntu SMP Tue Feb 12 13:35:51 UTC 2019 |x86_64",
+                  "version": "16.04.6 LTS"
                 },
-                {
-                   "os": {
-                      "arch": "x86_64",
-                      "major": "7",
-                      "minor": "6",
-                      "name": "CentOS Linux",
-                      "platform": "centos",
-                      "uname": "Linux |1cb46c820ff5 |5.2.9-200.fc30.x86_64 |#1 SMP Fri Aug 16 21:37:45 UTC 2019 |x86_64",
-                      "version": "7.6"
-                   },
-                   "registerIP": "127.0.0.1",
-                   "name": "1cb46c820ff5",
-                   "status": "Active",
-                   "dateAdd": "2019-08-30 08:02:33",
-                   "lastKeepAlive": "9999-12-31 23:59:59",
-                   "node_name": "master",
-                   "ip": "127.0.0.1",
-                   "id": "000",
-                   "version": "Wazuh v3.10.2",
-                   "manager": "1cb46c820ff5"
-                },
-                {
-                   "registerIP": "10.0.10.10",
-                   "name": "NewHost_2",
-                   "status": "Never connected",
-                   "dateAdd": "2019-08-30 09:31:03",
-                   "node_name": "unknown",
-                   "ip": "10.0.10.10",
-                   "id": "123"
-                }
-             ],
-             "total_affected_items": 10
-          }
+                "registerIP": "any",
+                "status": "active",
+                "version": "Wazuh v3.10.0"
+              }
+            ],
+            "total_affected_items": 3
+          },
+          "message": "All selected agents information was returned",
+          "error": 0
         }
     http_version:
   recorded_at: Wed, 22 Jan 2020 09:39:56 GMT
