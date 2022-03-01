@@ -29,10 +29,14 @@ module Wazuh
         items = []
         data = send(method, path, options)
         total_items = api_version == 3 ? data.totalItems : data.total_affected_items
+
+        return data.items if (api_version == 3 && data.items.size == data.totalItems)
+        return data.affected_items if (api_version == 4 && data.affected_items.size == data.total_affected_items)
+
         0.step(total_items, MAX_ITEM_NUM) do |offset|
           options[:offset] = offset
           d = send(method, path, options)
-          _items = api_version == 3 ? data.items : d.affected_items
+          _items = api_version == 3 ? d.items : d.affected_items
           items.concat(_items)
         end
 
