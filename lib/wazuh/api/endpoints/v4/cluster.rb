@@ -89,6 +89,16 @@ module Wazuh
           def restart_nodes(options = {})
             offset_request('put', "/cluster/restart", options)
           end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_conf_validation
+          def check_nodes_config(options = {})
+            offset_request('get', "/cluster/configuration/validationj", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_node_config
+          def node_active_configuration(node_id, component, configuration, options = {})
+            offset_request('get', "/cluster/#{node_id}/configuration/#{component}/#{configuration}", options)
+          end
         end
       end
     end

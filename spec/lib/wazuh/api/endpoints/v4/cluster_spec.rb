@@ -19,8 +19,8 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     it { expect(client).to respond_to(:node_logs) }
     it { expect(client).to respond_to(:node_logs_summary) }
     it { expect(client).to respond_to(:restart_nodes) }
-    xit { expect(client).to respond_to(:check_nodes_config) }
-    xit { expect(client).to respond_to(:node_active_configuration) }
+    it { expect(client).to respond_to(:check_nodes_config) }
+    it { expect(client).to respond_to(:node_active_configuration) }
   end
 
   let(:fixture) { 'api/v4/cluster/local_node_info.json' }
@@ -312,11 +312,40 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:result) {
-        client.restart_nodes.first
-      }
-  
       it { expect(client.restart_nodes.first).to eq('master-node') }
+    end
+  end
+
+  describe '#check_nodes_config' do
+    let(:fixture) { 'api/v4/cluster/check_nodes_config.json' }
+  
+    it 'Type match' do
+      expect(client.check_nodes_config).to be_a(Array)
+    end
+  
+    describe 'interface test' do
+      it { expect(client.check_nodes_config.first).to respond_to(:name) }
+      it { expect(client.check_nodes_config.first).to respond_to(:status) }
+    end
+  end
+
+  describe '#node_active_configuration' do
+    let(:fixture) { 'api/v4/cluster/node_active_configuration.json' }
+
+    let(:component) { 'agent' }
+    let(:configuration) { 'client' }
+  
+    it 'Type match' do
+      expect(client.node_active_configuration(node_id, component, configuration)).to be_a(Array)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_active_configuration(node_id, component, configuration)
+      }
+
+      it { expect(config.first).to respond_to(:bind_addr) }
+      it { expect(config.first).to respond_to(:disabled) }
     end
   end
 end
