@@ -1,0 +1,50 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "info": {
+          "ip": "172.17.0.100",
+          "version": "3.9.0",
+          "type": "master",
+          "totalActiveAgents": 2
+        }
+      },
+      {
+        "info": {
+          "ip": "172.17.0.101",
+          "version": "3.9.0",
+          "type": "worker",
+          "totalActiveAgents": 5
+        },
+        "status": {
+          "last_sync_agentinfo": {
+            "date_start_master": "2019-01-11T18:52:57.72Z",
+            "date_end_master": "2019-01-11T18:52:57.73Z",
+            "n_synced_chunks": 1
+          },
+          "sync_integrity_free": true,
+          "last_sync_agentgroups": {
+            "date_end_master": "2019-01-11T18:52:51.56Z",
+            "total_agentgroups": 0,
+            "date_start_master": "2019-01-11T18:52:51.56Z"
+          },
+          "last_sync_integrity": {
+            "total_files": {
+              "shared": 2,
+              "missing": 4,
+              "extra_valid": 0,
+              "extra": 0
+            },
+            "date_end_master": "2019-01-11T18:52:45.47Z",
+            "date_start_master": "2019-01-11T18:52:44.36Z"
+          },
+          "last_keep_alive": "2019-01-11T18:52:16.66Z",
+          "sync_agentinfo_free": true,
+          "sync_extravalid_free": true
+        }
+      }
+    ]
+  },
+  "message": "All selected nodes healthcheck information was returned",
+  "error": 0
+}

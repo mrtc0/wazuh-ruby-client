@@ -1,0 +1,55 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "global": {
+          "jsonout_output": "yes",
+          "alerts_log": "yes",
+          "logall": "no",
+          "logall_json": "no",
+          "email_notification": "no",
+          "smtp_server": "smtp.example.wazuh.com",
+          "email_from": "ossecm@example.wazuh.com",
+          "email_to": "recipient@example.wazuh.com",
+          "email_maxperhour": 12,
+          "email_log_source": "alerts.log",
+          "queue_size": 131072,
+          "white_list": [
+            "127.0.0.1",
+            "^localhost.localdomain$",
+            "127.0.0.53"
+          ]
+        },
+        "alerts": {
+          "log_alert_level": "3",
+          "email_alert_level": "12"
+        },
+        "cis-cat": {
+          "disabled": "yes",
+          "timeout": 1800,
+          "interval": "1d",
+          "scan-on-start": "yes",
+          "java_path": "wodles/java",
+          "ciscat_path": "wodles/ciscat"
+        },
+        "command": [
+          {
+            "name": "disable-account",
+            "executable": "disable-account.sh",
+            "expect": "user",
+            "timeout_allowed": "yes"
+          },
+          {
+            "name": "restart-ossec",
+            "executable": "restart-ossec.sh"
+          }
+        ]
+      }
+    ],
+    "total_affected_items": 1,
+    "failed_items": [],
+    "total_failed_items": 0
+  },
+  "message": "Configuration was successfully read",
+  "error": 0
+}

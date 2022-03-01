@@ -1,0 +1,13 @@
+{
+  "message": "Restart request sent to all specified nodes",
+  "error": 0,
+  "data": {
+    "affected_items": [
+      "master-node",
+      "worker1"
+    ],
+    "total_affected_items": 2,
+    "failed_items": [],
+    "total_failed_items": 0
+  }
+}

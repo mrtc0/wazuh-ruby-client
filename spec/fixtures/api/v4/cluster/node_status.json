@@ -1,0 +1,30 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "wazuh-agentlessd": "stopped",
+        "wazuh-analysisd": "running",
+        "wazuh-authd": "stopped",
+        "wazuh-csyslogd": "stopped",
+        "wazuh-dbd": "stopped",
+        "wazuh-execd": "running",
+        "wazuh-integratord": "stopped",
+        "wazuh-logcollector": "running",
+        "wazuh-maild": "stopped",
+        "wazuh-monitord": "running",
+        "wazuh-remoted": "running",
+        "wazuh-reportd": "stopped",
+        "wazuh-syscheckd": "running",
+        "wazuh-apid": "running",
+        "wazuh-clusterd": "running",
+        "wazuh-db": "running",
+        "wazuh-modulesd": "running"
+      }
+    ],
+    "total_affected_items": 1,
+    "failed_items": [],
+    "total_failed_items": 0
+  },
+  "message": "Processes status was successfully read",
+  "error": 0
+}
