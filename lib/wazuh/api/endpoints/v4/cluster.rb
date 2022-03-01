@@ -54,6 +54,26 @@ module Wazuh
           def node_stats(node_id, options = {})
             offset_request('get', "/cluster/#{node_id}/stats", options)
           end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_stats_hourly_node
+          def node_stats_hour(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/stats/hourly", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_stats_weekly_node
+          def node_stats_week(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/stats/weekly", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_stats_analysisd_node
+          def node_stats_analysisd(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/stats/analysisd", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_stats_remoted_node
+          def node_stats_remoted(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/stats/remoted", options)
+          end
         end
       end
     end
