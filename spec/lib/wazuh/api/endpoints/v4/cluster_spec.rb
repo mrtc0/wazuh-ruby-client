@@ -13,9 +13,10 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     it { expect(client).to respond_to(:node_config) }
     xit { expect(client).to respond_to(:update_node_configuration) }
     it { expect(client).to respond_to(:node_stats) }
-    xit { expect(client).to respond_to(:node_stats_hour) }
-    xit { expect(client).to respond_to(:node_stats_analysisd) }
-    xit { expect(client).to respond_to(:node_stats_remoted) }
+    it { expect(client).to respond_to(:node_stats_hour) }
+    it { expect(client).to respond_to(:node_stats_week) }
+    it { expect(client).to respond_to(:node_stats_analysisd) }
+    it { expect(client).to respond_to(:node_stats_remoted) }
     xit { expect(client).to respond_to(:node_logs) }
     xit { expect(client).to respond_to(:node_logs_summary) }
     xit { expect(client).to respond_to(:restart_nodes) }
@@ -193,6 +194,77 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
       it { expect(config).to respond_to(:totalAlerts) }
       it { expect(config).to respond_to(:events) }
       it { expect(config).to respond_to(:firewall) }
+    end
+  end
+
+  describe '#node_stats_hour' do
+    let(:fixture) { 'api/v4/cluster/node_stats_hour.json' }
+  
+    it 'Type match' do
+      expect(client.node_stats_hour(node_id)).to be_a(Array)
+      expect(client.node_stats_hour(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_stats_hour(node_id).first
+      }
+  
+      it { expect(config).to respond_to(:averages) }
+      it { expect(config).to respond_to(:interactions) }
+    end
+  end
+
+  describe '#node_stats_week' do
+    let(:fixture) { 'api/v4/cluster/node_stats_week.json' }
+  
+    it 'Type match' do
+      expect(client.node_stats_week(node_id)).to be_a(Array)
+      expect(client.node_stats_week(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_stats_week(node_id).first
+      }
+  
+      it { expect(config).to respond_to(:Sun) }
+    end
+  end
+
+  describe '#node_stats_analysisd' do
+    let(:fixture) { 'api/v4/cluster/node_stats_analysisd.json' }
+  
+    it 'Type match' do
+      expect(client.node_stats_analysisd(node_id)).to be_a(Array)
+      expect(client.node_stats_analysisd(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_stats_analysisd(node_id).first
+      }
+  
+      it { expect(config).to respond_to(:total_events_decoded) }
+      it { expect(config).to respond_to(:syscheck_events_decoded) }
+    end
+  end
+
+  describe '#node_stats_remoted' do
+    let(:fixture) { 'api/v4/cluster/node_stats_remoted.json' }
+  
+    it 'Type match' do
+      expect(client.node_stats_remoted(node_id)).to be_a(Array)
+      expect(client.node_stats_remoted(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_stats_remoted(node_id).first
+      }
+  
+      it { expect(config).to respond_to(:queue_size) }
+      it { expect(config).to respond_to(:total_queue_size) }
     end
   end
 end
