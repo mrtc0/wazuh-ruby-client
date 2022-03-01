@@ -15,7 +15,7 @@ module Wazuh
         #   Filters by policy description
         # @option options [rationale] :rationale
         #   Filters by rationale
-        # @option options [remediation] :remediation 
+        # @option options [remediation] :remediation
         #   Filters by remediation
         # @option options [file] :file
         #   Filters by file

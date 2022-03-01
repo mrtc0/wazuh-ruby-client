@@ -1,0 +1,38 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "averages": [
+          40,
+          24,
+          67,
+          234,
+          66,
+          24,
+          634,
+          66,
+          123,
+          56,
+          65,
+          23,
+          666,
+          233,
+          646,
+          44,
+          64,
+          99,
+          34,
+          235,
+          653,
+          25,
+          65,
+          23
+        ],
+        "interactions": 0
+      }
+    ],
+    "total_affected_items": 1,
+    "failed_items": [],
+    "total_failed_items": 0
+  }
+}

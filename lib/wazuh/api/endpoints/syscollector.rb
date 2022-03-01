@@ -216,7 +216,7 @@ module Wazuh
         #   Filters by process sgroup.
         # @option options [suser] :suser
         #   Filters by process suser.
-        # 
+        #
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-processes-info
         def processes(agent_id, options = {})
           offset_request('get', "/syscollector/#{agent_id}/processes", options)

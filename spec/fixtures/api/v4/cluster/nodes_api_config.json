@@ -1,0 +1,78 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "node_name": "master_node",
+        "node_api_config": {
+          "host": "0.0.0.0",
+          "port": 55000,
+          "https": {
+            "enabled": true,
+            "key": "/var/ossec/api/configuration/ssl/server.key",
+            "cert": "/var/ossec/api/configuration/ssl/server.crt",
+            "use_ca": false,
+            "ca": "/var/ossec/api/configuration/ssl/ca.crt"
+          },
+          "access": {
+            "max_login_attempts": 50,
+            "block_time": 300,
+            "max_request_per_minute": 300
+          },
+          "logs": {
+            "path": "/var/ossec/logs/api.log",
+            "level": "info"
+          },
+          "cors": {
+            "enabled": false,
+            "source_route": "*",
+            "allow_headers": "*",
+            "allow_credentials": false
+          },
+          "cache": {
+            "enabled": true,
+            "time": 0.75
+          },
+          "use_only_authd": false,
+          "drop_privileges": true,
+          "experimental_features": false
+        }
+      },
+      {
+        "node_name": "worker1",
+        "node_api_config": {
+          "host": "0.0.0.0",
+          "port": 55000,
+          "https": {
+            "enabled": true,
+            "key": "/var/ossec/api/configuration/ssl/server.key",
+            "cert": "/var/ossec/api/configuration/ssl/server.crt",
+            "use_ca": false,
+            "ca": "/var/ossec/api/configuration/ssl/ca.crt"
+          },
+          "logs": {
+            "path": "/var/ossec/logs/api.log",
+            "level": "info"
+          },
+          "cors": {
+            "enabled": false,
+            "source_route": "*",
+            "allow_headers": "*",
+            "allow_credentials": false
+          },
+          "cache": {
+            "enabled": true,
+            "time": 0.75
+          },
+          "use_only_authd": false,
+          "drop_privileges": true,
+          "experimental_features": false
+        }
+      }
+    ],
+    "total_affected_items": 2,
+    "total_failed_items": 0,
+    "failed_items": []
+  },
+  "message": "API configuration was successfully read in all specified nodes",
+  "error": 0
+}

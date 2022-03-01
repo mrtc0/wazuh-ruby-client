@@ -1,0 +1,29 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "timestamp": "2020-04-15T13:43:38+00:00",
+        "tag": "wazuh-analysisd",
+        "level": "error",
+        "description": " (1277): Invalid syscheck message received"
+      },
+      {
+        "timestamp": "2020-04-15T13:43:38+00:00",
+        "tag": "wazuh-analysisd",
+        "level": "error",
+        "description": " (1277): Invalid syscheck message received"
+      },
+      {
+        "timestamp": "2020-04-15T13:43:30+00:00",
+        "tag": "wazuh-analysisd",
+        "level": "error",
+        "description": " (1277): Invalid syscheck message received"
+      }
+    ],
+    "total_affected_items": 3,
+    "failed_items": [],
+    "total_failed_items": 0
+  },
+  "message": "Logs were successfully read in specified node",
+  "error": 0
+}

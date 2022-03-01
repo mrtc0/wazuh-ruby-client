@@ -18,7 +18,7 @@ module Wazuh
         options[:ssl].merge!({ verify: false }) unless verify_ssl
 
         opts = {
-          :links_parser => ::Sawyer::LinkParsers::Simple.new
+          links_parser: ::Sawyer::LinkParsers::Simple.new
         }
 
         case api_version

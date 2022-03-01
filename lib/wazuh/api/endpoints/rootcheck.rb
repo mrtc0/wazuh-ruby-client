@@ -21,7 +21,7 @@ module Wazuh
         end
 
         # Get last rootcheck scan
-        # Returns the timestamp of the last rootcheck scan. 
+        # Returns the timestamp of the last rootcheck scan.
         #
         # @param [String] agent_id
         # @see https://documentation.wazuh.com/3.10/user-manual/api/reference.html#get-last-rootcheck-scan

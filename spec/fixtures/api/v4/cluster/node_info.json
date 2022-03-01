@@ -1,0 +1,21 @@
+{
+  "data": {
+    "affected_items": [
+      {
+        "path": "/var/ossec",
+        "version": "v3.9.0",
+        "compilation_date": "2019-03-06T11:24:59Z",
+        "type": "manager",
+        "max_agents": "unlimited",
+        "openssl_support": "yes",
+        "tz_offset": 0,
+        "tz_name": "UTC"
+      }
+    ],
+    "total_affected_items": 1,
+    "failed_items": [],
+    "total_failed_items": 0
+  },
+  "message": "Basic information was successfully read",
+  "error": 0
+}

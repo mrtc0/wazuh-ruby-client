@@ -4,7 +4,7 @@ module Wazuh
       module Agents
         #
         # Returns a list with the available agents.
-        # 
+        #
         # @option options [String] :offset
         #   First element to return in the collection.
         # @option options [String] :limit
