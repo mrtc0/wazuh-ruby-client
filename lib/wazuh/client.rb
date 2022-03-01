@@ -31,4 +31,3 @@ module Wazuh
     end
   end
 end
-
