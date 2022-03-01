@@ -11,14 +11,13 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     it { expect(client).to respond_to(:node_status) }
     it { expect(client).to respond_to(:node_info) }
     it { expect(client).to respond_to(:node_config) }
-    xit { expect(client).to respond_to(:update_node_configuration) }
     it { expect(client).to respond_to(:node_stats) }
     it { expect(client).to respond_to(:node_stats_hour) }
     it { expect(client).to respond_to(:node_stats_week) }
     it { expect(client).to respond_to(:node_stats_analysisd) }
     it { expect(client).to respond_to(:node_stats_remoted) }
-    xit { expect(client).to respond_to(:node_logs) }
-    xit { expect(client).to respond_to(:node_logs_summary) }
+    it { expect(client).to respond_to(:node_logs) }
+    it { expect(client).to respond_to(:node_logs_summary) }
     xit { expect(client).to respond_to(:restart_nodes) }
     xit { expect(client).to respond_to(:check_nodes_config) }
     xit { expect(client).to respond_to(:node_active_configuration) }
@@ -265,6 +264,43 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
   
       it { expect(config).to respond_to(:queue_size) }
       it { expect(config).to respond_to(:total_queue_size) }
+    end
+  end
+
+  describe '#node_logs' do
+    let(:fixture) { 'api/v4/cluster/node_logs.json' }
+  
+    it 'Type match' do
+      expect(client.node_logs(node_id)).to be_a(Array)
+      expect(client.node_logs(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_logs(node_id).first
+      }
+  
+      it { expect(config).to respond_to(:timestamp) }
+      it { expect(config).to respond_to(:tag) }
+      it { expect(config).to respond_to(:level) }
+      it { expect(config).to respond_to(:description) }
+    end
+  end
+
+  describe '#node_logs_summary' do
+    let(:fixture) { 'api/v4/cluster/node_logs_summary.json' }
+  
+    it 'Type match' do
+      expect(client.node_logs_summary(node_id)).to be_a(Array)
+      expect(client.node_logs_summary(node_id).first).to be_a(Sawyer::Resource)
+    end
+  
+    describe 'interface test' do
+      let(:config) {
+        client.node_logs_summary(node_id).first
+      }
+  
+      it { expect(config).to respond_to('wazuh-modulesd'.to_sym) }
     end
   end
 end
