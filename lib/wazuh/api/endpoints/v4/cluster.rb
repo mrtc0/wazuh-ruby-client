@@ -84,6 +84,11 @@ module Wazuh
           def node_logs_summary(node_id, options = {})
             offset_request('get', "/cluster/#{node_id}/logs/summary", options)
           end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.put_restart
+          def restart_nodes(options = {})
+            offset_request('put', "/cluster/restart", options)
+          end
         end
       end
     end

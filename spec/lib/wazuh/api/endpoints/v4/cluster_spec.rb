@@ -18,7 +18,7 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     it { expect(client).to respond_to(:node_stats_remoted) }
     it { expect(client).to respond_to(:node_logs) }
     it { expect(client).to respond_to(:node_logs_summary) }
-    xit { expect(client).to respond_to(:restart_nodes) }
+    it { expect(client).to respond_to(:restart_nodes) }
     xit { expect(client).to respond_to(:check_nodes_config) }
     xit { expect(client).to respond_to(:node_active_configuration) }
   end
@@ -301,6 +301,22 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
       }
   
       it { expect(config).to respond_to('wazuh-modulesd'.to_sym) }
+    end
+  end
+
+  describe '#restart_nodes' do
+    let(:fixture) { 'api/v4/cluster/restart_nodes.json' }
+  
+    it 'Type match' do
+      expect(client.restart_nodes).to be_a(Array)
+    end
+  
+    describe 'interface test' do
+      let(:result) {
+        client.restart_nodes.first
+      }
+  
+      it { expect(client.restart_nodes.first).to eq('master-node') }
     end
   end
 end
