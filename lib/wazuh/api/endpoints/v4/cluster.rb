@@ -74,6 +74,16 @@ module Wazuh
           def node_stats_remoted(node_id, options = {})
             offset_request('get', "/cluster/#{node_id}/stats/remoted", options)
           end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_log_node
+          def node_logs(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/logs", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_log_summary_node
+          def node_logs_summary(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/logs/summary", options)
+          end
         end
       end
     end
