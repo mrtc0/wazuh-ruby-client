@@ -184,15 +184,15 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:stats) {
         client.node_stats(node_id).first
       }
   
-      it { expect(config).to respond_to(:hour) }
-      it { expect(config).to respond_to(:alerts) }
-      it { expect(config).to respond_to(:totalAlerts) }
-      it { expect(config).to respond_to(:events) }
-      it { expect(config).to respond_to(:firewall) }
+      it { expect(stats).to respond_to(:hour) }
+      it { expect(stats).to respond_to(:alerts) }
+      it { expect(stats).to respond_to(:totalAlerts) }
+      it { expect(stats).to respond_to(:events) }
+      it { expect(stats).to respond_to(:firewall) }
     end
   end
 
@@ -205,12 +205,12 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:stats) {
         client.node_stats_hour(node_id).first
       }
   
-      it { expect(config).to respond_to(:averages) }
-      it { expect(config).to respond_to(:interactions) }
+      it { expect(stats).to respond_to(:averages) }
+      it { expect(stats).to respond_to(:interactions) }
     end
   end
 
@@ -223,11 +223,11 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:stats) {
         client.node_stats_week(node_id).first
       }
   
-      it { expect(config).to respond_to(:Sun) }
+      it { expect(stats).to respond_to(:Sun) }
     end
   end
 
@@ -240,12 +240,12 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:stats) {
         client.node_stats_analysisd(node_id).first
       }
   
-      it { expect(config).to respond_to(:total_events_decoded) }
-      it { expect(config).to respond_to(:syscheck_events_decoded) }
+      it { expect(stats).to respond_to(:total_events_decoded) }
+      it { expect(stats).to respond_to(:syscheck_events_decoded) }
     end
   end
 
@@ -258,12 +258,12 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:stats) {
         client.node_stats_remoted(node_id).first
       }
   
-      it { expect(config).to respond_to(:queue_size) }
-      it { expect(config).to respond_to(:total_queue_size) }
+      it { expect(stats).to respond_to(:queue_size) }
+      it { expect(stats).to respond_to(:total_queue_size) }
     end
   end
 
@@ -276,14 +276,14 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:log) {
         client.node_logs(node_id).first
       }
   
-      it { expect(config).to respond_to(:timestamp) }
-      it { expect(config).to respond_to(:tag) }
-      it { expect(config).to respond_to(:level) }
-      it { expect(config).to respond_to(:description) }
+      it { expect(log).to respond_to(:timestamp) }
+      it { expect(log).to respond_to(:tag) }
+      it { expect(log).to respond_to(:level) }
+      it { expect(log).to respond_to(:description) }
     end
   end
 
@@ -296,11 +296,11 @@ describe Wazuh::Api::Endpoints::V4::Cluster do
     end
   
     describe 'interface test' do
-      let(:config) {
+      let(:summary) {
         client.node_logs_summary(node_id).first
       }
   
-      it { expect(config).to respond_to('wazuh-modulesd'.to_sym) }
+      it { expect(summary).to respond_to('wazuh-modulesd'.to_sym) }
     end
   end
 
