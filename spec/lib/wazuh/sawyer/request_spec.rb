@@ -45,7 +45,7 @@ describe Wazuh::Sawyer::Request do
         end
       end
 
-      describe 'number of response items', vcr: { cassette_name: 'requests/offset_request_more_than_500_items' } do
+      describe 'number of response items', vcr: { cassette_name: 'requests/offset_request_more_than_500_items_v3' } do
         it 'The number of items must match' do
           expect(client.offset_request('get', '/test').size).to eq(700)
         end
@@ -55,10 +55,47 @@ describe Wazuh::Sawyer::Request do
     context 'Wazuh API v4' do
       let(:client) { Wazuh::Client.new(api_version: 4, basic_user: "wazuh", basic_password: "wazuh") }
 
-      context 'If the number of affected_items is equal to the requested number of offsets' do
+      describe 'method call' do
+        before {
+          allow(client).to receive(:get).and_return(Sawyer::Resource.new(sawyer_agent, data))
+        }
+
+        context 'If the number of affected_items is equal to the requested number of offsets' do
+          let(:data) {
+            {:total_affected_items => 3, :affected_items => 3.times.map { {:dummy => 'dummy'} } }
+          }
+
+          it 'get method must be called only once' do
+            client.offset_request('get', '/test')
+            expect(client).to have_received(:get).once
+          end
+
+          it 'The number of items must match' do
+            expect(client.offset_request('get', '/test').size).to eq(3)
+          end
+        end
+
+        context 'If there are more affected_items than the requested number of offsets' do
+          let(:data) {
+            {:total_affected_items => 700, :affected_items => 500.times.map { {:dummy => 'dummy'} } }
+          }
+
+          it 'get method must be called 3 times' do
+            client.offset_request('get', '/test')
+            expect(client).to have_received(:get).exactly(3).times
+          end
+        end
       end
 
-      context 'If there are more affected_items than the requested number of offsets' do
+      describe 'number of response items', vcr: { cassette_name: 'requests/offset_request_more_than_500_items_v4' } do
+        before {
+          Wazuh::Sawyer::Connection::Token.instance_variable_set('@_token', 'eyj')
+          client.instance_variable_set('@_exp', Time.now.to_i)
+        }
+
+        it 'The number of items must match' do
+          expect(client.offset_request('get', '/test').size).to eq(700)
+        end
       end
     end
   end
