@@ -4,6 +4,56 @@ module Wazuh
       module V4
         module Cluster
           include ::Wazuh::Api::Endpoints::Cluster
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_cluster_node
+          def local_node_info(options = {})
+            offset_request('get', '/cluster/local/info', options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_cluster_nodes
+          def nodes_info(options = {})
+            offset_request('get', '/cluster/nodes', options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_healthcheck
+          def nodes_healthcheck(options = {})
+            offset_request('get', '/cluster/healthcheck', options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_status
+          def cluster_status(options = {})
+            get '/cluster/status', options
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_config
+          def local_node_config(options = {})
+            offset_request('get', '/cluster/local/config', options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_api_config
+          def nodes_api_config(options = {})
+            offset_request('get', '/cluster/api/config', options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_status_node
+          def node_status(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/status", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_info_node
+          def node_info(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/info", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_configuration_node
+          def node_config(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/configuration", options)
+          end
+
+          # https://documentation.wazuh.com/current/user-manual/api/reference.html#operation/api.controllers.cluster_controller.get_stats_node
+          def node_stats(node_id, options = {})
+            offset_request('get', "/cluster/#{node_id}/stats", options)
+          end
         end
       end
     end
