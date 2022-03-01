@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+Supports v4 Cluster API.
+
+- [Supports v4 Cluster API by mrtc0 · Pull Request #36 · mrtc0/wazuh-ruby-client](https://github.com/mrtc0/wazuh-ruby-client/pull/36)
+
 ## [0.3.4]
 
 Support Vulnerability API.
