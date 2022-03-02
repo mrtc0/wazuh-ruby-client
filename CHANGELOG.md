@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+Bug fix.
+
+- [Fix: multiple requests in offset_request by mrtc0 · Pull Request #37 · mrtc0/wazuh-ruby-client](https://github.com/mrtc0/wazuh-ruby-client/pull/37)
+
+## [0.3.5]
+
 Supports v4 Cluster API.
 
 - [Supports v4 Cluster API by mrtc0 · Pull Request #36 · mrtc0/wazuh-ruby-client](https://github.com/mrtc0/wazuh-ruby-client/pull/36)
