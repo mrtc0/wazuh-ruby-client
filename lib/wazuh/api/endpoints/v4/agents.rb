@@ -12,6 +12,10 @@ module Wazuh
             delete "/agents/group", {group_id: group, agents_list: ids }
           end
 
+          def add_agent_to_group(id, group)
+            put "/agents/#{id}/group/#{group}"
+          end
+
           def delete_agent_by_group(ids)
             delete '/agents/groups', {groups_list: ids}
           end
@@ -57,7 +61,7 @@ module Wazuh
           end
 
           def add_agents_to_group(ids, group_id)
-            put "/agents/group", {group_id: group_id, agents_list: ids}
+            put "/agents/group", { group_id: group_id, agents_list: ids}
           end
 
           def agent_upgrade(agent_id, options = {})
