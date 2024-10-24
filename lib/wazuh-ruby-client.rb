@@ -7,7 +7,6 @@ require 'base64'
 require 'faraday'
 require 'sawyer'
 require 'jwt'
-require 'faraday_middleware'
 
 require_relative 'wazuh/config'
 require_relative 'wazuh/sawyer/token'
