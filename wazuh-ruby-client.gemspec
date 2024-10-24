@@ -44,7 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "timecop"
 
   spec.add_dependency 'faraday'
-  spec.add_dependency 'faraday_middleware'
   spec.add_dependency 'sawyer'
   spec.add_dependency 'jwt'
 end
