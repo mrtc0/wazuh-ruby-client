@@ -19,9 +19,6 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
 
-    - name: Install bundler2
-      run: gem install bundler
-
     - name: Bundle install
       run: bundle install --jobs 4 --retry 3
 
